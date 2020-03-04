@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    hugo:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+            args:
+                HUGO_VERSION: 0.66.0
+        container_name: hugo-dev
+        volumes:
+            - ${PWD}:/data
+        ports:
+            - 1313:1313
