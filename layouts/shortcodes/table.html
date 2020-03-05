@@ -1,0 +1,11 @@
+<!-- table -->
+<div class="table-responsive">
+    {{ if .IsNamedParams }}
+    <caption>
+        <strong>Table: {{ .Get "caption" }}</strong>
+    </caption>
+    {{ end }}
+    <table class="table-responsive">
+        {{.Inner}}
+    </table>
+</div>
