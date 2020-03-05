@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
     hugo:
@@ -6,9 +6,16 @@ services:
             context: .
             dockerfile: Dockerfile.dev
             args:
-                HUGO_VERSION: 0.66.0
+                HUGO_VERSION: "${HUGO_VERSION:-0.66.0}"
         container_name: hugo-dev
         volumes:
             - ${PWD}:/data
         ports:
             - 1313:1313
+        restart: "on-failure"
+        healthcheck:
+            test: "${DOCKER_HEALTHCHECK:-wget -q -O /dev/null localhost:1313}"
+            interval: "60s"
+            timeout: "3s"
+            start_period: "5s"
+            retries: 3
