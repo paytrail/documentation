@@ -1,4 +1,4 @@
-baseURL = "https://docs.paytrail.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Paytrail Integration Guide"
 theme = "dot"
@@ -8,17 +8,23 @@ enableRobotsTXT = true
 summaryLength = 140
 
 [[menu.main]]
-name = "Paytrail"
-url = "https://paytrail.com"
+name = "contact"
+url = "https://www.paytrail.com/en/customer-service"
 weight = 1
 
 [[menu.main]]
-name = "Source"
+name = "Paytrail"
+url = "https://paytrail.com"
+weight = 2
+
+[[menu.main]]
+name = "Contribute"
 url = "https://github.com/paytrail/documentation"
-weight = 1
+weight = 3
 
 [params]
 logo = "logo.png"
+logo_white = "logo.png"
 
 primary_color = "#e60094"
 body_color = "#EEEEEE"
@@ -27,7 +33,7 @@ text_color_dark = "#323232"
 white_color = "#ffffff"
 light_color = "#f9f9f9"
 
-font_family = "Lato"
+font_family = "lato"
 
 [[params.social]]
 icon = "ti-facebook"
@@ -40,3 +46,26 @@ link = "https://twitter.com/paytrail"
 [[params.social]]
 icon = "ti-linkedin"
 link = "https://www.linkedin.com/company/paytrail-oyj/"
+
+[Languages.en]
+languageName = "en"
+languageCode = "en-us"
+weight = 1
+home = "Home"
+copyright = "The content is licensed under the open-source MIT license."
+
+[Languages.en.params.banner]
+title = "Paytrail Integration Guide"
+subtitle = "Find out how to integrate your business with our payment service."
+bg_image = "images/banner.jpg"
+placeholder = "Searching something specific? Type it here."
+
+[Languages.en.params.cta]
+enable = true
+title = "Didn't find what you were looking for?"
+content = "We are here to assist you in English, Finnish or Swedish"
+
+[Languages.en.params.cta.button]
+enable = true
+label = "Contact Us"
+link = "https://www.paytrail.com/en/customer-service"
