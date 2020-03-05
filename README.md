@@ -27,4 +27,9 @@ open http://localhost:8080
 
 Documentation is placed in the `content/` subdirectory. Modify it, check the results from browser, and open a new pull request for the maintainers.
 
+## Deploying
+
+For previewing the contributions, you can create a test deployment to [**Netlify**][netlify] by running `make deploy-staging` and `make deploy-prod`.
+
 [hugodocs]: https://gohugo.io/getting-started/
+[netlify]: https://app.netlify.com/
