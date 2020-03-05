@@ -5,6 +5,9 @@
 # Generated files by hugo
 /public/
 /resources/_gen/
+*.html
+*.css
+*.js
 
 # Executable may be added to repository
 hugo.exe
