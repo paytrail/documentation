@@ -11,4 +11,4 @@ build: clean
 	hugo
 
 start:
-	hugo serve -D
+	hugo serve -D --bind 0.0.0.0
