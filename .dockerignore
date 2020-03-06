@@ -1,0 +1,9 @@
+.netlify/
+.dockerignore
+.gitignore
+.gitmodules
+docker-compose.yml
+Dockerfile*
+LICENSE
+netlify.toml
+README.md
