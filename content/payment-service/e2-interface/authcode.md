@@ -3,6 +3,7 @@ title: "Calculating the payment AUTHCODE"
 date: 2020-03-05T14:08:24+02:00
 lastmod: 2020-03-05T14:08:24+02:00
 draft: false
+weight: 2
 ---
 
 `AUTHCODE` is calculated by joining all fields listed in `PARAMS_IN`. Fields are joined by placing the `|` character (pipe, vertical bar) between each two fields. `AUTHCODE` is formed from this string by calculating a sum using algorithm from `ALG` field. This sum is converted to its 64 character hexadecimal form and lowercase letters are capitalized.

@@ -3,6 +3,7 @@ title: "Using Payment Service"
 date: 2020-03-05T09:30:41+02:00
 lastmod: 2020-03-05T09:30:41+02:00
 draft: false
+weight: 1
 ---
 
 {{< figure src="payment-page.png" title="Figure: Payment Page" alt="Payment Page" >}}
