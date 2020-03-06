@@ -6,6 +6,13 @@
 
 To build the project locally, you either need **Hugo** or **Docker** to be installed. In this section, we document the Docker usage. If necessary, read the official [Hugo documentation][hugodocs] for getting started without Docker.
 
+Fork and clone the project from GitHub. Current theme is included in the project as a sub-module which must be fetched as well.
+
+```sh
+git clone git@github.com:<USERNAME>/documentation.git
+git submodule update --init --recursive --remote
+```
+
 Project is bundled with `Dockerfile` and `docker-compose.yml` for building it without dependencies.
 
 To build the image and launch a development container:
