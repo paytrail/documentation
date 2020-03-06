@@ -1,35 +1,19 @@
+<div style="text-align: center">
+    <img src="static/logo.png" alt="Paytrail" />
+</div>
+
 # Paytrail Integration Guide
 
-This repository holds the source code for the Paytrail integration guide.
-
-## Building
-
-To build the project locally, you either need _Hugo_ or _Docker_ to be installed. In this section, we document the Docker usage. If necessary, read the official [Hugo documentation][hugodocs] for getting started without Docker.
-
-Project is bundled with `Dockerfile` and `docker-compose.yml` for building it without dependencies.
-
-To build the image and launch a development container:
-
-```sh
-docker-compose up --build -d
-open http://localhost:1313
-```
-
-To build a _production-like_ image and launch an _nginx_ server:
-
-```sh
-docker build -t paytrail/documentation .
-docker run --rm -dit --name hugo-nginx -p 8080:80 paytrail/documentation:latest
-open http://localhost:8080
-```
+This repository holds the source code for the Paytrail integration guide created with [**Hugo**][hugo] static site generator.
 
 ## Contributing
 
-Documentation is placed in the `content/` subdirectory. Modify it, check the results from browser, and open a new pull request for the maintainers.
+Contributions, issues and feature requests are welcome.
+Feel free to check the [issues][issues] page and read the [contributing guide](CONTRIBUTING.md) if you want to contribute.
 
-## Deploying
+[hugo]: https://gohugo.io/
+[issues]: https://github.com/paytrail/documentation/issues
 
-For previewing the contributions, you can create a test deployment to [**Netlify**][netlify] by running `make deploy-staging` and `make deploy-prod`.
+## Authors
 
-[hugodocs]: https://gohugo.io/getting-started/
-[netlify]: https://app.netlify.com/
+See the [AUTHORS](AUTHORS.md) file.
