@@ -3,6 +3,7 @@ title: "Fields to be sent to payment gateway"
 date: 2020-03-05T14:08:24+02:00
 lastmod: 2020-03-05T14:08:24+02:00
 draft: false
+weight: 1
 ---
 
 Following form describes fields to be sent to payment gateway.
