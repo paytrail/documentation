@@ -30,7 +30,6 @@ HUGO_VERSION = "0.66.0"
 HUGO_ENABLEGITINFO = "true"
 
 [[redirects]]
-# /* /404.html 404
 from = "/*"
 to = "/404.html"
 status = 404
