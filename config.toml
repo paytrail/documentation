@@ -8,7 +8,7 @@ enableRobotsTXT = true
 summaryLength = 140
 
 [[menu.main]]
-name = "contact"
+name = "Contact"
 url = "https://www.paytrail.com/en/customer-service"
 weight = 1
 
