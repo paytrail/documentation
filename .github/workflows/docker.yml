@@ -23,6 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build and Test Docker Image
       run: |
+        git submodule update --init --recursive --remote
         docker build -t paytrail/documentation .
         docker run --rm -dit --name hugo-nginx -p 8080:80 paytrail/documentation:latest
         echo "Waiting for service to start..." && sleep 5
