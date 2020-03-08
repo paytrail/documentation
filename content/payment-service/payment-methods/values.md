@@ -1,7 +1,5 @@
 ---
-title: "Payment method values"
-date: 2020-03-06T14:09:25+02:00
-lastmod: 2020-03-06T14:09:25+02:00
+title: "Payment Method Values"
 draft: false
 ---
 

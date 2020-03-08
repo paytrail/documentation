@@ -1,7 +1,5 @@
 ---
-title: "Migrating from E1 to E2 and S1 to S2"
-date: 2020-03-05T09:47:15+02:00
-lastmod: 2020-03-05T09:47:15+02:00
+title: "Migrating E1 to E2 and S1 to S2"
 draft: false
 weight: 2
 ---

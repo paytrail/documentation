@@ -1,7 +1,5 @@
 ---
-title: "Calculating the AUTHCODE for State Query"
-date: 2020-03-08T13:54:05+02:00
-lastmod: 2020-03-08T13:54:05+02:00
+title: "Calculating the AUTHCODE for a State Query"
 draft: false
 weight: 2
 ---

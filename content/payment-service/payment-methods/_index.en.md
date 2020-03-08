@@ -1,7 +1,5 @@
 ---
-title: "Selection and visibility of payment methods"
-date: 2020-03-06T14:04:47+02:00
-lastmod: 2020-03-06T14:04:47+02:00
+title: "Selection and Visibility of Payment Methods"
 draft: false
 weight: 4
 ---

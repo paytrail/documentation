@@ -1,7 +1,5 @@
 ---
 title: "Introduction"
-date: 2020-03-08T13:08:27+02:00
-lastmod: 2020-03-08T13:08:27+02:00
 draft: false
 weight: 1
 ---

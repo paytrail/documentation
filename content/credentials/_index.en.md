@@ -1,8 +1,6 @@
 ---
 title: "Test Credentials"
-date: 2020-03-05T09:21:40+02:00
-lastmod: 2020-03-05T09:21:40+02:00
-description: "Try Paytrail with a test merchant before buying."
+description: "Try payment service with a test merchant before buying."
 icon: "ti-lock"
 draft: false
 type: docs

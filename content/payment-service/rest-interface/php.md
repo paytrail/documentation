@@ -1,7 +1,5 @@
 ---
 title: "PHP"
-date: 2020-03-06T14:14:03+02:00
-lastmod: 2020-03-06T14:14:03+02:00
 draft: false
 weight: 5
 ---

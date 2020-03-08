@@ -1,7 +1,5 @@
 ---
 title: "Embedding with the REST Interface"
-date: 2020-03-08T13:08:44+02:00
-lastmod: 2020-03-08T13:08:44+02:00
 draft: false
 weight: 2
 ---
