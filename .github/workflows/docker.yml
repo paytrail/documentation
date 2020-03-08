@@ -24,9 +24,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
     - name: Build and Test Docker Image
       run: |
-        git submodule update --init --recursive --remote
         docker build -t paytrail/documentation .
         docker run --rm -dit --name hugo-nginx -p 8080:80 paytrail/documentation:latest
         echo "Waiting for service to start..." && sleep 5
