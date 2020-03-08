@@ -1,0 +1,31 @@
+name: Docker Integration Test Suite
+
+# Controls when the action will run. Triggers the workflow on push or pull request 
+# events but only for the master branch
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    - name: Build and Test Docker Image
+      run: |
+        docker build -t paytrail/documentation .
+        docker run --rm -dit --name hugo-nginx -p 8080:80 paytrail/documentation:latest
+        echo "Waiting for service to start..." && sleep 5
+        curl -sI http://localhost:8080 | grep "HTTP/1.1 200 OK"
+        curl -s http://localhost:8080 | grep -c "Paytrail Integration Guide" > /dev/null
+        docker stop hugo-nginx
