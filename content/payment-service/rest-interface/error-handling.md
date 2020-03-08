@@ -1,7 +1,5 @@
 ---
 title: "Error Handling"
-date: 2020-03-06T14:13:48+02:00
-lastmod: 2020-03-06T14:13:48+02:00
 draft: false
 weight: 3
 ---

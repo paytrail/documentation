@@ -1,7 +1,5 @@
 ---
 title: "State Query in HTML"
-date: 2020-03-08T13:54:00+02:00
-lastmod: 2020-03-08T13:54:00+02:00
 draft: false
 weight: 1
 ---

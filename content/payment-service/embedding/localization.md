@@ -1,7 +1,5 @@
 ---
 title: "Localization"
-date: 2020-03-08T13:09:07+02:00
-lastmod: 2020-03-08T13:09:07+02:00
 draft: false
 weight: 5
 ---

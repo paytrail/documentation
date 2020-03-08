@@ -1,7 +1,5 @@
 ---
-title: "Fields to be sent to payment gateway"
-date: 2020-03-05T14:08:24+02:00
-lastmod: 2020-03-05T14:08:24+02:00
+title: "Fields to Be Sent to Payment Gateway"
 draft: false
 weight: 1
 ---

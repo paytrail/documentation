@@ -1,7 +1,5 @@
 ---
 title: "Payment Creation"
-date: 2020-03-06T14:13:01+02:00
-lastmod: 2020-03-06T14:13:01+02:00
 draft: false
 weight: 2
 ---
