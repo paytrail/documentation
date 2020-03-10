@@ -3,7 +3,7 @@ FROM alpine:3.11 AS build
 LABEL description="Docker image for documentation made with Hugo static site generator."
 LABEL maintainer="Paytrail <tekniikka@paytrail.com>"
 
-ARG HUGO_VERSION=0.66.0
+ARG HUGO_VERSION=0.67.0
 ENV HUGO_VERSION=${HUGO_VERSION}
 
 RUN apk update \
