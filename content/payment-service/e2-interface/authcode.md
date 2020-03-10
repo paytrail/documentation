@@ -6,7 +6,7 @@ weight: 2
 
 `AUTHCODE` is calculated by joining all fields listed in `PARAMS_IN`. Fields are joined by placing the `|` character (pipe, vertical bar) between each two fields. `AUTHCODE` is formed from this string by calculating a sum using algorithm from `ALG` field. This sum is converted to its 64 character hexadecimal form and lowercase letters are capitalized.
 
-#### Example: Calculating the payment `AUTHCODE` with form data for interface version E2 including all optional fields
+**Example: Calculating the payment `AUTHCODE` with form data for interface version E2 including all optional fields**
 
 This example covers sending payment information in the most complete form. This form is placed in the web shop by the payment method selection. The form shows the payment button currently in use and moves customer to payment service payment selection page when clicked. All fields are listed in this example, including optional unnecessary fields for better clarity. They can be removed from the form.
 
@@ -236,7 +236,7 @@ Now the string to be used for `AUTHCODE` calculation is formed by joining the fi
 EAC78AB322614BB98F43FFF2EF55E71075DDC79634EA728C9C842EFF8E0AC0C9
 ```
 
-#### Example: Calculating the payment `AUTHCODE` with form data for interface version E2 including minimum set of fields
+**Example: Calculating the payment `AUTHCODE` with form data for interface version E2 including minimum set of fields**
 
 ```html
 <form action="https://payment.paytrail.com/e2" method="post">
