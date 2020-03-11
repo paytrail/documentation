@@ -1,7 +1,7 @@
 ---
 title: "Creating a Link to the Banner"
 draft: false
-weight: 2
+weight: 1
 ---
 
 - The URL of the image is <https://img.paytrail.com/index.svm>
