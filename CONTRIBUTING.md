@@ -9,8 +9,9 @@ To build the project locally, you either need **Hugo** or **Docker** to be insta
 Fork and clone the project from GitHub. Current theme is included in the project as a sub-module which must be fetched as well.
 
 ```sh
+# Replace the <USERNAME> with your GitHub account name after forking.
 git clone git@github.com:<USERNAME>/documentation.git
-git submodule update --init --recursive --remote
+cd documentation && git submodule update --init --recursive --remote
 ```
 
 Project is bundled with `Dockerfile` and `docker-compose.yml` for building it without dependencies.
