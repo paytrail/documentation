@@ -6,6 +6,10 @@
 
 This repository holds the source code for the Paytrail integration guide created with [**Hugo**][hugo] static site generator.
 
+## Installing
+
+This project can be installed locally as long as you have either Hugo or Docker installed. Follow the steps in the [contributing guide](CONTRIBUTING.md) to get started.
+
 ## Contributing
 
 Contributions, issues and feature requests are welcome.
