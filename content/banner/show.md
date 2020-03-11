@@ -1,5 +1,5 @@
 ---
-title: "Showing Available Payment Methods in the Webshop"
+title: "Showing Available Payment Methods"
 draft: false
 weight: 2
 ---
