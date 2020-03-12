@@ -19,8 +19,11 @@ RUN make build
 
 FROM nginx:1.17-alpine
 
-RUN sed -i -e "s|#error_page|error_page|g" "/etc/nginx/conf.d/default.conf"
-
+COPY conf/nginx.conf /etc/nginx
+COPY conf/default.conf /etc/nginx/conf.d
 COPY --from=build /data/public/ /usr/share/nginx/html
+
+USER nginx
+EXPOSE 8080
 
 HEALTHCHECK CMD wget -q -O /dev/null http://localhost:8080 || exit 1
