@@ -27,7 +27,7 @@ To build a _production-like_ image and launch an **nginx** server serving the st
 
 ```sh
 docker build -t paytrail/documentation .
-docker run --rm -dit --name hugo-nginx -p 8080:80 paytrail/documentation:latest
+docker run --rm -dit --name hugo-nginx -p 8080:8080 paytrail/documentation:latest
 open http://localhost:8080
 ```
 
