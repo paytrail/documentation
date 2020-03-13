@@ -26,11 +26,16 @@ jobs:
     - uses: actions/checkout@master
       with:
         submodules: recursive
-    - name: Build and Test Docker Image
+    - name: Build Docker Image
+      run: docker build -t paytrail/documentation .
+    - name: Run Container Tests
+      env:
+        # Wait <TIMEOUT> seconds before running tests to ensure the container is running.
+        TIMEOUT: 5
       run: |
-        docker build -t paytrail/documentation .
         docker run --rm -dit --name hugo-nginx -p 8080:8080 paytrail/documentation:latest
-        echo "Waiting for service to start..." && sleep 5
+        echo "Waiting for service to start..." && sleep ${TIMEOUT}
         curl -sI http://localhost:8080 | grep "HTTP/1.1 200 OK"
         curl -s http://localhost:8080 | grep -c "Paytrail Integration Guide" > /dev/null
         docker stop hugo-nginx
+        
