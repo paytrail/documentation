@@ -63,7 +63,7 @@ placeholder = "Searching something specific? Type it here."
 [Languages.en.params.cta]
 enable = true
 title = "Didn't find what you were looking for?"
-content = "We are here to assist you in English, Finnish or Swedish"
+content = "Call our technical support number +358 20 718 1831 (weekdays 8–16 UTC +2/3), or email your questions at tech@paytrail.com"
 
 [Languages.en.params.cta.button]
 enable = true
