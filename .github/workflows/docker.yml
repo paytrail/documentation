@@ -19,6 +19,7 @@ jobs:
 
     env:
       DOCKER_BUILDKIT: 1
+      TAG: "paytrail/documentation:latest"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,15 +28,13 @@ jobs:
       with:
         submodules: recursive
     - name: Build Docker Image
-      run: docker build -t paytrail/documentation .
+      run: docker build -t ${TAG} .
     - name: Run Container Tests
       env:
+        # Create container with this name
+        CONTAINER_NAME: hugo-nginx
+        # Bind the running container to this port
+        LOCAL_PORT: 8080
         # Wait <TIMEOUT> seconds before running tests to ensure the container is running.
         TIMEOUT: 5
-      run: |
-        docker run --rm -dit --name hugo-nginx -p 8080:8080 paytrail/documentation:latest
-        echo "Waiting for service to start..." && sleep ${TIMEOUT}
-        curl -sI http://localhost:8080 | grep "HTTP/1.1 200 OK"
-        curl -s http://localhost:8080 | grep -c "Paytrail Integration Guide" > /dev/null
-        docker stop hugo-nginx
-        
+      run: bash tests/docker.sh
