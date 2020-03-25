@@ -23,6 +23,8 @@ COPY conf/nginx.conf /etc/nginx
 COPY conf/default.conf /etc/nginx/conf.d
 COPY --from=build /data/public/ /usr/share/nginx/html
 
+RUN chown -R nginx:nginx /var/cache/nginx
+
 USER nginx
 EXPOSE 8080
 
