@@ -5,11 +5,9 @@ services:
         build:
             context: .
             dockerfile: Dockerfile.dev
-            args:
-                HUGO_VERSION: "${HUGO_VERSION:-0.68.1}"
         container_name: hugo-dev
         volumes:
-            - ${PWD}:/data
+            - ${PWD}:/src
         ports:
             - 1313:1313
         restart: "on-failure"
