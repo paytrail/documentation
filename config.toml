@@ -33,7 +33,7 @@ text_color_dark = "#000000"
 white_color = "#ffffff"
 light_color = "#f9f9f9"
 
-font_family = "Sen"
+font_family = "Poppins"
 
 [[params.social]]
 icon = "ti-facebook"
