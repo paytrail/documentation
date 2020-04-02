@@ -1,0 +1,3 @@
+# Set up CORS resource
+/*
+  Access-Control-Allow-Origin: *

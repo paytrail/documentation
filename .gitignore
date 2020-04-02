@@ -12,6 +12,6 @@ hugo.darwin
 hugo.linux
 
 # Netlify deployment files
-/.netlify/
+.netlify/
 
 # End of https://www.gitignore.io/api/hugo
