@@ -18,8 +18,8 @@ url = "https://paytrail.com"
 weight = 2
 
 [[menu.main]]
-name = "Contribute"
-url = "https://github.com/paytrail/documentation"
+name = "Changelog"
+url = "https://github.com/paytrail/documentation/blob/master/CHANGELOG.md"
 weight = 3
 
 [params]
