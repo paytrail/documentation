@@ -4,6 +4,7 @@ description: "Don't know where to begin? Follow our guide for integrating Paytra
 icon: "ti-wand"
 draft: false
 type: docs
+weight: 1
 ---
 
 ### Introduction
