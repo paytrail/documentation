@@ -4,6 +4,7 @@ description: "Try payment service with a test merchant before buying."
 icon: "ti-lock"
 draft: false
 type: docs
+weight: 6
 ---
 
 [**Paytrail Payment Service**][ps] is testable using merchant ID `13466` and merchant secret `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`. These test credentials work with [form interface][form], [REST interface][rest] and payment method selection page embedding.
@@ -15,6 +16,8 @@ type: docs
 **Shopify** gateway is testable using merchant ID `13466` and Shopify token `d3d86c09e781a00dda469e420166623f67a618e6`.
 
 The test credentials for the Finnish banks and credit cards are listed below. They can be used with the test credentials to test the complete payment process without making any real payments.
+
+{{< notice warning >}}Payment methods **MobilePay**, **Jousto**, and **Collector** are not available for the test merchant, and can't be tested.{{< /notice >}}
 
 ### Nordea
 - **ID:** `123456`
