@@ -1,8 +1,12 @@
 ---
 title: "Refunds"
+description: "Refunds can be created easily via Paytrail Merchant API."
+icon: "ti-back-left"
 draft: false
+type: docs
 weight: 4
 ---
+
 
 ### Creating a Refund
 
@@ -195,5 +199,3 @@ The customer will be notified of a successful refund cancellation by email. DELE
 - **HTTP 204:** Refund was cancelled successfully.
 - **HTTP 404:** Refund was not found with given token. Check that you gave a non-empty token that points to an existing refund.
 - **HTTP 405:** Refund cannot be cancelled from its current state. Check refund's status from Merchant's Panel. Note that `DELETE` is not allowed for card refunds. Response in case of card refund is **405**.
-
-
