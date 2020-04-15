@@ -1,5 +1,5 @@
 ---
-title: "Payment Method Values"
+title: "Payment Method IDs"
 draft: false
 ---
 
