@@ -1,7 +1,7 @@
 ---
 title: "Rest Interface"
 draft: false
-weight: 5
+weight: 3
 ---
 
 {{% notice note %}}REST interface does not support payment page bypass.{{% /notice %}}

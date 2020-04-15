@@ -1,7 +1,6 @@
 ---
 title: "Error Codes"
 draft: false
-weight: 4
 ---
 
 {{< table caption="Error codes in payment creation" >}}

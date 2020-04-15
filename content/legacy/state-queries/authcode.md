@@ -1,7 +1,6 @@
 ---
 title: "Calculating the AUTHCODE for a State Query"
 draft: false
-weight: 2
 ---
 
 `AUTHCODE` is calculated from a string which combines _Merchant Secret_, _Merchant ID_ and _Order Number_. All variables are separated by `&` (ampersand). Hash is calculated from this string using the MD5 algorithm, and the result is then transformed to a 32 character hexadecimal string and converted to upper case letters.

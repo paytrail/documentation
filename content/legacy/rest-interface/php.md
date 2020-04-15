@@ -1,7 +1,6 @@
 ---
 title: "PHP"
 draft: false
-weight: 5
 ---
 
 When the payment service is integrated to an application developed in PHP, the easiest way to implement the payment service is to use our module, which connects to Paytrail payment service JSON interface.

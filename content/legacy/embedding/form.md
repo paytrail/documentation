@@ -1,7 +1,6 @@
 ---
 title: "Embedding with the Form Interface"
 draft: false
-weight: 3
 ---
 
 ### Signature
@@ -14,7 +13,7 @@ initWithForm(formId: string, options: object)
 The form element ID value data is sent to the payment service. The form element is replaced with a payment selection element once it has been downloaded. If JavaScript is not enabled, the customer can send this form normally and go to the payment selection page. Therefore, remember to keep a visible send button in the form.
 
 - `options: object` \
-Options is a data structure, which allows adding extra parameters for the design and functionality of the payment method selection page widget. The parameters are described in [parameters][params].
+Options is a data structure, which allows adding extra parameters for the design and functionality of the payment method selection page widget. The parameters are described in parameters.
 
 **Example: Payment method selection page embedding with form interface**
 
@@ -34,5 +33,3 @@ Options is a data structure, which allows adding extra parameters for the design
     });
 </script>
 ```
-
-[params]: {{< ref "payment-service/embedding/parameters" >}}

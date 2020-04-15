@@ -1,7 +1,6 @@
 ---
 title: "Parameters"
 draft: false
-weight: 4
 ---
 
 The last parameter of `initWithToken` and `initWithForm` is an object named `options`. This object can be used to customize the design and functionality of the payment method selection widget. All parameters of the options structure are optional and their _default_ values are presented in parenthesis.
