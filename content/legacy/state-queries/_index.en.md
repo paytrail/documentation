@@ -1,7 +1,7 @@
 ---
 title: "State Queries"
 draft: false
-weight: 7
+weight: 4
 ---
 
 The state of an unique payment can be checked with an HTML `<form>`.

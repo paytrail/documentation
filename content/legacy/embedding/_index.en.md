@@ -1,7 +1,7 @@
 ---
 title: "Embedding"
 draft: false
-weight: 6
+weight: 1
 ---
 
 When Paytrail payment service has been integrated using either the [REST interface][rest] or the [form interface][form], the payment process can be shortened and made easier from the customer's point of view by implementing payment method selection embedding. In this case the payment methods are available directly at the end of a webshop's order process instead of having to move first to Paytrail service to select the payment method.

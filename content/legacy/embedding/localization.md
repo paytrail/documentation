@@ -1,7 +1,6 @@
 ---
 title: "Localization"
 draft: false
-weight: 5
 ---
 
 The payment method selection page embedding supports the following localizations:

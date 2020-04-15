@@ -4,6 +4,7 @@ description: "Don't get it? Don't sweat it. Read the definitions from our glossa
 icon: "ti-book"
 draft: false
 type: docs
+weight: 8
 ---
 
 **Customer** – A consumer, the customer of a merchant, the person making a payment.
@@ -13,3 +14,9 @@ type: docs
 **Paytrail Payment Service** – Service that allows customers to pay for purchases to the Merchant. Includes all popular payment methods in Finland.
 
 **Paytrail Sales Channel** – A channel where multiple merchants can sell their products in one location (like an online marketplace or mall). This allows the customer to buy from several different merchants and make only one payment.
+
+**Daily Settlements** – Explanation needed.
+
+**Weekly Settlements** – Explanation needed.
+
+**Monthly Settlements** – Explanation needed.

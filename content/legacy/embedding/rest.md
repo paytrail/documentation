@@ -1,7 +1,6 @@
 ---
 title: "Embedding with the REST Interface"
 draft: false
-weight: 2
 ---
 
 ### Signature
@@ -17,7 +16,7 @@ ID value for the HTML element describing an optional view for moving to the paym
 The REST interface returns a token value, which is sent as a parameter to the request.
 
 - `options: object` \
-Options is a data structure, which allows adding extra parameters for the design and functionality of the payment method selection page widget. The parameters are described in [parameters][params].
+Options is a data structure, which allows adding extra parameters for the design and functionality of the payment method selection page widget. The parameters are described in parameters.
 
 **Example: Payment method selection page embedding with JSON interface**
 
@@ -35,5 +34,3 @@ Options is a data structure, which allows adding extra parameters for the design
     });
 </script>
 ```
-
-[params]: {{< ref "payment-service/embedding/parameters" >}}

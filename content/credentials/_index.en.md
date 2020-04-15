@@ -7,9 +7,8 @@ type: docs
 weight: 6
 ---
 
-[**Paytrail Payment Service**][ps] is testable using merchant ID `13466` and merchant secret `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`. These test credentials work with [form interface][form], [REST interface][rest] and payment method selection page embedding.
+**Paytrail Payment Service**] is testable using merchant ID `13466` and merchant secret `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`. These test credentials work with [form interface][form], [REST interface][rest] and payment method selection page embedding.
 
-[ps]: {{< ref "payment-service" >}}
 [form]: {{< ref "form-interface" >}}
 [rest]: {{< ref "rest-interface" >}}
 
