@@ -1,10 +1,15 @@
 ---
 title: "Settlements"
-draft: false
+description: "Settlements can be created easily via Paytrail Merchant API."
+icon: "ti-money"
+draft: true
+type: docs
 weight: 5
 ---
 
-Merchant API settlements feature is not available for demo merchant (13466).
+{{< notice warning >}}Merchant API settlements feature is not available for demo merchant (13466).{{< /notice >}}
+
+{{< notice note >}}An agreement modification is required to enable settlements via Merchant API.{{< /notice >}}
 
 ### Request
 
@@ -718,4 +723,3 @@ Content-Type: application/json
 #### Resource Specific Error Messages
 
 - `invalid-settlement-id` (**Code:** `404`) Invalid ID. Check settlement ID format.
-
