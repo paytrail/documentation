@@ -2,7 +2,7 @@
 title: "Settlements"
 description: "Settlements can be created easily via Paytrail Merchant API."
 icon: "ti-money"
-draft: true
+draft: false
 type: docs
 weight: 5
 ---
