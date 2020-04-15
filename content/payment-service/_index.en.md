@@ -4,7 +4,6 @@ icon: "ti-file"
 description: "Find out how to use Paytrail payment service through different interfaces."
 icon: "ti-credit-card"
 draft: false
-type: docs
 ---
 
 {{< figure src="payment-page.png" title="Figure: Payment Page" alt="Payment Page" >}}
