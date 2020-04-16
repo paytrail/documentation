@@ -1,6 +1,6 @@
 ---
 title: "Displaying Payment Methods in Checkout"
-description: "Paytrail has a variety of payment methods available to use during the checkout process."
+description: "Display payment methods in the checkout instead of Paytrail's payment page."
 icon: ti-gallery
 draft: false
 type: docs

@@ -1,6 +1,6 @@
 ---
 title: "Settlements"
-description: "Settlements can be created easily via Paytrail Merchant API."
+description: "Fetch payment data or settlement data via the API."
 icon: "ti-money"
 draft: false
 type: docs
