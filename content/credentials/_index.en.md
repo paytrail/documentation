@@ -1,6 +1,6 @@
 ---
 title: "Test Credentials"
-description: "Try payment service with a test merchant before buying."
+description: "Use the test credentials to test the payment flow."
 icon: "ti-lock"
 draft: false
 type: docs

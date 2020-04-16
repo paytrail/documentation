@@ -1,6 +1,6 @@
 ---
 title: "Refunds"
-description: "Refunds can be created easily via Paytrail Merchant API."
+description: "Create refunds from the backend instead of Paytrail's Merchant Panel."
 icon: "ti-back-left"
 draft: false
 type: docs
