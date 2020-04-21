@@ -4,6 +4,23 @@ draft: false
 weight: 3
 ---
 
+### Usage
+
+We offer a PHP package for creating payments with the E2 interface easily. You can import the package to your project with **Composer** like so:
+
+```sh
+composer require paytrail/e2-module
+```
+
+The package requires **PHP 7.2** or newer. The detailed documentation is available on [**GitHub**][e2-gh] and [**Packagist**][e2-packagist].
+
+If you encounter any problems using the package don't hesitate reporting them to us in GitHub. You can also participate in the package development by submitting us pull requests.
+
+[e2-gh]: https://github.com/paytrail/e2-module
+[e2-packagist]: https://packagist.org/packages/paytrail/e2-module
+
+### Fields
+
 Following form describes fields to be sent to payment gateway.
 
 Payment gateway address is: <https://payment.paytrail.com/e2>
