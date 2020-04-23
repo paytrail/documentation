@@ -64,7 +64,7 @@ Use your own user ID for testing. Payments will not be charged on your bank acco
 - **CVC:** any 3 digits
 
 ### MasterCard
-- **Card Number:** 5413000000000000
+- **Card Number:** `5413000000000000`
 - **Expiry:** later than current date
 - **CVC:** any 3 digits
 
