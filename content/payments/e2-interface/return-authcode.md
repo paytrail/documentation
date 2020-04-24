@@ -1,38 +1,30 @@
 ---
 title: "Calculating the RETURN_AUTHCODE"
 draft: false
-weight: 4
+weight: 5
 ---
 
-{{< table caption="Example of calculation" >}}
-    <tbody>
-        <tr>
-            <td>ORDER_NUMBER</td>
-            <td>ORDER-12345</td>
-        </tr>
-        <tr>
-            <td>PAYMENT_ID</td>
-            <td>123456789012</td>
-        </tr>
-        <tr>
-            <td>AMOUNT</td>
-            <td>200.00</td>
-        </tr>
-        <tr>
-            <td>TIMESTAMP</td>
-            <td>1491896573</td>
-        </tr>
-        <tr>
-            <td>STATUS</td>
-            <td>PAID</td>
-        </tr>
-        <tr>
-            <td>Merchant authentication hash</td>
-            <td>6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ</td>
-        </tr>
-    </tbody>
-</table>
-{{< /table >}}
+### Fields for the `RETURN_AUTHCODE`
+
+#### `ORDER_NUMBER`
+`ORDER-12345`
+
+#### `PAYMENT_ID`
+`123456789012`
+
+#### `AMOUNT`
+`200.00`
+
+#### `TIMESTAMP`
+`1491896573`
+
+#### `STATUS`
+`PAID`
+
+#### `MERCHANT AUTHENTICATION HASH`
+`6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
+
+### Calculation Formula
 
 Combining these fields using the `|` character as separator, the following string is formed:
 
