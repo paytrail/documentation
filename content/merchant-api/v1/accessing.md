@@ -4,11 +4,11 @@ draft: false
 weight: 2
 ---
 
-### Authentication
+## Authentication
 
 API requests are authenticated through HTTP authentication. See _Authorization_ header description for details.
 
-#### Headers
+### Headers
 
 - **Timestamp**: Request timestamp. Must be the same as what is used for signature calculation.
 - **Content-MD5:** Base64 encoded MD5 sum for the request body contents. For GET requests content is always empty and content-MD5 is calculated of empty string.
@@ -29,7 +29,7 @@ base64_encode(
 )
 ```
 
-**Example: Signature calculation for refund creation**
+#### Example Signature Calculation for Refund Creation
 
 - **API Key (Merchant ID):** `13466`
 - **Merchant Secret:** `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
@@ -55,7 +55,7 @@ base64_encode(
 
 Note that there are no newlines before or after first and last curly braces. Newline character here is `\n`.
 
-#### Responses
+### Responses
 
 The API has general responses that may be returned for all of the API queries.
 
@@ -69,49 +69,25 @@ The API has general responses that may be returned for all of the API queries.
 
 The response body is a JSON message when a status code `4xx` or `5xx` is returned.
 
-{{< table caption="General error codes and workarounds" >}}
-    <thead>
-        <tr>
-            <th>Error code string and HTTP code</th>
-            <th>Description</th>
-            <th>Workaround</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>invalid-signature (HTTP 403)</td>
-            <td>Signature is not valid</td>
-            <td>Check signature calculation</td>
-        </tr>
-        <tr>
-            <td>invalid-api-name (HTTP 403)</td>
-            <td>API name is not valid</td>
-            <td>Check that API name is PaytrailMerchantAPI</td>
-        </tr>
-        <tr>
-            <td>merchant-inactive (HTTP 403)</td>
-            <td>Merchant specified in API key is inactive</td>
-            <td>Please contact customer support</td>
-        </tr>
-        <tr>
-            <td>refunds-not-enabled (HTTP 403)</td>
-            <td>Merchant does not have Refunds enabled</td>
-            <td>Please contact customer support</td>
-        </tr>
-        <tr>
-            <td>invalid-json (HTTP 400)</td>
-            <td>JSON parsing failed</td>
-            <td>Check that JSON input is valid</td>
-        </tr>
-        <tr>
-            <td>service-unavailable (HTTP 503)</td>
-            <td>Refunding service is currently unavailable</td>
-            <td>Please try again later</td>
-        </tr>
-    </tbody>
-{{< /table >}}
+#### `invalid-signature (HTTP 403)`
+Signature is not valid. Check signature calculation.
 
-**Example: JSON message structure with invalid API name**
+#### `invalid-api-name (HTTP 403)`
+API name is not valid. Check that API name is `PaytrailMerchantAPI`.
+
+#### `merchant-inactive (HTTP 403)`
+Merchant specified with the API key is inactive. Please contact customer support.
+
+#### `refunds-not-enabled (HTTP 403)`
+Merchant does not have refunds enabled. Please contact customer support.
+
+#### `invalid-json (HTTP 400)`
+JSON parsing failed. Check that JSON input is valid.
+
+#### `service-unavailable (HTTP 503)`
+Refunding service is currently unavailable. Please try again later.
+
+### Example JSON Structure with Invalid API Name
 
 ```json
 {
