@@ -7,11 +7,7 @@ weight: 3
 The sales channel can be tested with the ID and channel secret shown below.
 
 - **Channel ID:** `123`
-- **Channel Secret:**
-
-```plain
-12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678
-```
+- **Channel Secret:** `12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678`
 
 {{% notice note %}}Additionally, all sent products must use merchant ID 13466 and channel commission class ID 1 when testing.{{% /notice %}}
 
@@ -69,180 +65,48 @@ The last field `AUTHCODE` is calculated as follows:
 
 In the example above the values of fields are as described below.
 
-{{< table >}}
-<thead>
-    <tr>
-        <th>Field</th>
-        <th>Value</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>Channel secret</td>
-        <td>
-            <pre>
-12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678</pre
-            >
-        </td>
-    </tr>
-    <tr>
-        <td>Channel ID</td>
-        <td>123</td>
-    </tr>
-    <tr>
-        <td>Order number</td>
-        <td>12345678</td>
-    </tr>
-    <tr>
-        <td>Currency</td>
-        <td>EUR</td>
-    </tr>
-    <tr>
-        <td>Return address / Successful payment</td>
-        <td>https://www.example.com/ok</td>
-    </tr>
-    <tr>
-        <td>Return address / Cancelled payment</td>
-        <td>https://www.example.com/cancel</td>
-    </tr>
-    <tr>
-        <td>Notify address</td>
-        <td>https://www.example.com/notify</td>
-    </tr>
-    <tr>
-        <td>Interface version</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Culture code</td>
-        <td>fi_FI</td>
-    </tr>
-    <tr>
-        <td>Preselected method for Payment page bypass</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td>Payer’s telephone number</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td>Payer’s cellphone number</td>
-        <td>+35812345678</td>
-    </tr>
-    <tr>
-        <td>Payer’s email address</td>
-        <td>example@example.com</td>
-    </tr>
-    <tr>
-        <td>Payer’s first name</td>
-        <td>Jane</td>
-    </tr>
-    <tr>
-        <td>Payer’s last name</td>
-        <td>Doe</td>
-    </tr>
-    <tr>
-        <td>Payer’s company</td>
-        <td>Test Ltd</td>
-    </tr>
-    <tr>
-        <td>Payer’s street address</td>
-        <td>Teststreet 1</td>
-    </tr>
-    <tr>
-        <td>Payer’s zip code</td>
-        <td>43210</td>
-    </tr>
-    <tr>
-        <td>Payer’s city</td>
-        <td>Helsinki</td>
-    </tr>
-    <tr>
-        <td>Payer’s country</td>
-        <td>FI</td>
-    </tr>
-    <tr>
-        <td>Is VAT is included in price?</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Amount of items</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>Product #1 name</td>
-        <td>Example product 1</td>
-    </tr>
-    <tr>
-        <td>Product #1 number</td>
-        <td>12345</td>
-    </tr>
-    <tr>
-        <td>Product #1 amount</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Product #1 price</td>
-        <td>10.00</td>
-    </tr>
-    <tr>
-        <td>Product #1 tax percent</td>
-        <td>22.00</td>
-    </tr>
-    <tr>
-        <td>Product #1 merchant ID</td>
-        <td>13466</td>
-    </tr>
-    <tr>
-        <td>Product #1 channel commission class ID</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Product #1 discount</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>Product #1 type</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Product #2 name</td>
-        <td>Example product 2</td>
-    </tr>
-    <tr>
-        <td>Product #2 number</td>
-        <td>12345</td>
-    </tr>
-    <tr>
-        <td>Product #2 amount</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>Product #2 price</td>
-        <td>5.00</td>
-    </tr>
-    <tr>
-        <td>Product #2 tax percent</td>
-        <td>22.00</td>
-    </tr>
-    <tr>
-        <td>Product #2 merchant ID</td>
-        <td>13466</td>
-    </tr>
-    <tr>
-        <td>Product #2 channel commission class ID</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Product #2 discount</td>
-        <td>20.00</td>
-    </tr>
-    <tr>
-        <td>Product #2 type</td>
-        <td>1</td>
-    </tr>
-</tbody>
-{{< /table >}}
+* **Channel secret:** `12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678`
+* **Channel ID**: `123`
+* **Order number:** `12345678`
+* **Currency:** `EUR`
+* **Return address (Successful payment):** <https://www.example.com/ok>
+* **Return address (Cancelled payment):** <https://www.example.com/cancel>
+* **Notify address:** <https://www.example.com/notify>
+* **Interface version:** `1`
+* **Culture code:** `fi_FI`
+* **Preselected method for the payment page bypass:** `1`
+* **Contact's telephone number:** `+01234567890`
+* **Contact's cellphone number:** `+35812345678`
+* **Contact's email address:** `example@example.com`
+* **Contact's first name:** _Jane_
+* **Contact's last name:** _Doe_
+* **Contact's company:** _Test Ltd_
+* **Contact's street address:** _Test Street 1_
+* **Contact's zip code:** _43210_
+* **Contact's city:** _Helsinki_
+* **Contact's country:** FI
+* **VAT included:** `1`
+* **Amount of items:** `2`
+* **Product #1**
+  * **Name:** _Example product 1_
+  * **Number:** `12345`
+  * **Amount:** `1`
+  * **Price:** `10.00`
+  * **Tax percent:** `22.00`
+  * **Merchant ID:** `13466`
+  * **Channel commission class ID:** `1`
+  * **Discount:** `0`
+  * **Type:** `1`
+* **Product #2**
+  * **Name:** _Example product 2_
+  * **Number:** `12345`
+  * **Amount:** `2`
+  * **Price:** `5.00`
+  * **Tax percent:** `22.00`
+  * **Merchant ID:** `13466`
+  * **Channel commission class ID:** `1`
+  * **Discount:** `20.00`
+  * **Type:** `1`
 
 The string used to calculate `AUTHCODE` is created by combining fields above.
 

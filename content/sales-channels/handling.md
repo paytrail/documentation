@@ -12,51 +12,19 @@ The field `NOTIFY_ADDRESS` can also be used. This address is called automaticall
 
 GET parameters used when redirecting to return and cancel addresses and when calling notify addresses are described below. The payment’s validity has to be checked using the GET parameters.
 
-{{< table caption="Product Rows" >}}
-<thead>
-    <tr>
-        <th>Field</th>
-        <th>Information</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>1.</td>
-        <td>Order number</td>
-        <td>ORDER_NUMBER</td>
-        <td>
-            This is the same order number that was sent to Paytrail by the sales channel.
-            The order number will be used to individualize each payment.
-        </td>
-    </tr>
-    <tr>
-        <td>2.</td>
-        <td>Timestamp</td>
-        <td>TIMESTAMP</td>
-        <td>Timestamp created by Paytrail. This is used for calculating the RETURN_AUTHCODE. Timestamps
-            are in UNIX format.</td>
-    </tr>
-    <tr>
-        <td>3.</td>
-        <td>Payment paid value</td>
-        <td>PAID</td>
-        <td>Value created by Paytrail. This is returned only with a successful payment.</td>
-    </tr>
-    <tr>
-        <td>4.</td>
-        <td>Authentication</td>
-        <td>RETURN_AUTHCODE</td>
-        <td>
-            The RETURN_AUTHCODE calculated by Paytrail.
-            The sales channel compares this against the value they have calculated.
-            If the value matches, payment information has been transferred correctly.
-            The value matches even if the payment is cancelled or unsuccessful.
-        </td>
-    </tr>
-</tbody>
-{{< /table >}}
+### Product Rows
+
+#### `ORDER_NUMBER`
+This is the same order number that was sent to Paytrail by the sales channel. The order number will be used to individualize each payment.
+
+#### `TIMESTAMP`
+Timestamp created by Paytrail. This is used for calculating the `RETURN_AUTHCODE`. Timestamps are in UNIX format.
+
+#### `PAID`
+Value created by Paytrail. This is returned only with a successful payment.
+
+#### `RETURN_AUTHCODE`
+The sales channel compares this against the value they have calculated. If the value matches, payment information has been transferred correctly. The value matches even if the payment is cancelled or unsuccessful.
 
 ### Calculating the `RETURN_AUTHCODE`
 
