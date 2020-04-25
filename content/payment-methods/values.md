@@ -1,183 +1,46 @@
 ---
-title: "Payment Method IDs"
+title: "Payment Method IDs and Names"
 draft: false
 ---
 
-{{< table caption="Available payment method IDs" >}}
-    <thead>
-        <tr>
-            <th>Method name</th>
-            <th>ID</th>
-            <th>Type</th>
-            <th>Requirements</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Nordea</td>
-            <td>1</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Osuuspankki</td>
-            <td>2</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Danske Bank</td>
-            <td>3</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Ålandsbanken</td>
-            <td>5</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Handelsbanken</td>
-            <td>6</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>PayPal</td>
-            <td>9</td>
-            <td>Debit/credit card</td>
-            <td>
-                <p>Only available as interface; requires own agreement with PayPal and is hidden until credentials are
-                    saved in Merchant's Panel</p>
-            </td>
-        </tr>
-        <tr>
-            <td>S-Pankki</td>
-            <td>10</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Klarna Invoice</td>
-            <td>11</td>
-            <td>Invoice</td>
-            <td>
-                <p>PAYER_PERSON_PHONE should be defined</p>
-                <p>Payer details should be defined (name, address, zip, city, country)</p>
-                <p>Only available as interface; requires own agreement with Klarna and is hidden until credentials
-                    are saved in Merchant's Panel</p>
-            </td>
-        </tr>
-        <tr>
-            <td>Klarna Installment</td>
-            <td>12</td>
-            <td>Invoice</td>
-            <td>
-                <p>PAYER_PERSON_PHONE should be defined</p>
-                <p>Payer details should be defined (name, address, zip, city, country)</p>
-                <p>Only available as interface; requires own agreement with Klarna and is hidden until credentials
-                    are saved in Merchant's Panel</p>
-            </td>
-        </tr>
-        <tr>
-            <td>Jousto</td>
-            <td>18</td>
-            <td>Invoice</td>
-            <td>
-                <p>Minimum amount 20 €</p>
-                <p>Maximum amount 5000 €</p>
-            </td>
-        </tr>
-        <tr>
-            <td>Visa</td>
-            <td>30</td>
-            <td>Debit/credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>MasterCard</td>
-            <td>31</td>
-            <td>Debit/credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Diners Club</td>
-            <td>34</td>
-            <td>Credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>JCB</td>
-            <td>35</td>
-            <td>Debit/credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Aktia</td>
-            <td>50</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>POP Pankki</td>
-            <td>51</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Säästöpankki</td>
-            <td>52</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Visa (Nets)</td>
-            <td>53</td>
-            <td>Debit/credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>MasterCard (Nets)</td>
-            <td>54</td>
-            <td>Debit/credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Diners Club (Nets)</td>
-            <td>55</td>
-            <td>Credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>American Express (Nets)</td>
-            <td>56</td>
-            <td>Credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>MobilePay</td>
-            <td>58</td>
-            <td>Debit/credit card</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>Collector Bank</td>
-            <td>60</td>
-            <td>Invoice</td>
-            <td>
-                <p>VAT_IS_INCLUDED value 1</p>
-                <p>ITEM_QUANTITY[n] should be integer</p>
-                <p>Maximum amount 5000 €</p>
-                <p>Product details should be defined</p>
-                <p>Payer details should be defined (name, address, zip, city, country)</p>
-            </td>
-        </tr>
-        <tr>
-            <td>Oma Säästöpankki</td>
-            <td>61</td>
-            <td>Finnish bank</td>
-            <td>&nbsp;</td>
-        </tr>
-    </tbody>
-{{< /table >}}
+This list defines the ID numbers for different payment methods supported by Paytrail.
+
+* **1** _Nordea_
+* **2** _Osuuspankki_
+* **3** _Danske Bank_
+* **5** _Ålandsbanken_
+* **6** _Handelsbanken_
+* **9** _PayPal_
+  
+  Only available as an interface. Requires own agreement with PayPal and is hidden until credentials are saved in Merchant's Panel.
+
+* **10** _S-Pankki_
+* **11** _Klarna Invoice_
+  
+  Field `PAYER_PERSON_PHONE` and payer details should be defined (name, address, zip, city, and country). Only available as an interface. Requires own agreement with Klarna, and is hidden until credentials are saved in Merchant's Panel.
+
+* **12** _Klarna Installment_
+  
+  Field `PAYER_PERSON_PHONE` and payer details should be defined (name, address, zip, city, and country). Only available as an interface. Requires own agreement with Klarna and is hidden until credentials are saved in Merchant's Panel.
+
+* **18** _Jousto_
+  
+  Amount must be between 20 and 5000 €.
+
+* **30** _Visa_
+* **31** _MasterCard_
+* **34** _Diners Club_
+* **35** _JCB_
+* **50** _Aktia_
+* **51** _POP Pankki_
+* **52** _Säästöpankki_
+* **53** _Visa (Nets)_
+* **54** _MasterCard (Nets)_
+* **55** _Diners Club (Nets)_
+* **56** _American Express (Nets)_
+* **58** _MobilePay_
+* **60** _Collector Bank_
+  
+  Field `VAT_IS_INCLUDED` should be `1`. Field `ITEM_QUANTITY[N]` should be an integer. Maximum amount is 5000 €. Product details should be defined. Payer details should be defined (name, address, zip, city, and country)
+
+* **61** _Oma Säästöpankki_
