@@ -8,7 +8,7 @@ If the sent request is incorrect or there is an error in the interface usage, th
 Error message XML root element is called `<error>`. Error message returns the following records:
 
 - `errorCode` (character string) \
-  Error code. Error code is an unambiguous character string that describes the error. Possible error codes are listed in table [error codes](error-codes.md).
+  Error code. Error code is an unambiguous character string that describes the error. Possible error codes are listed in table [error codes][errors].
 - `errorMessage` (character string) \
   Error description. This is a description of the error in chosen localisation. The error description is not to be shown to customers using the service.
 
@@ -30,3 +30,5 @@ Error message XML root element is called `<error>`. Error message returns the fo
   errorMessage: 'Missing or invalid order number'
 }
 ```
+
+[errors]: {{< ref "legacy/rest-interface/error-codes" >}}
