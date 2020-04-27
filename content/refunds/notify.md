@@ -1,7 +1,7 @@
 ---
-title: "Notify Webhooks"
+title: "Refund Status Notifications"
 draft: false
-weight: 6
+weight: 4
 ---
 
 ### Description
@@ -9,6 +9,10 @@ weight: 6
 Paytrail calls the notify URL with a `GET` request when the refund status changes. The received notification must be acknowledged by responding with an HTTP status in the `200–299` range.
 
 If an update is not acknowledged by the receiving end, the update to that refund is postponed until the next retry round. Updates will be retried after **1, 3, 6, 10, 15, 21, 28, 36, 45** and **55** hours, after which the notification is discarded. This may cause some updates to be skipped if the notification URL endpoint cannot be contacted within 55 hours.
+
+### Notification Flow
+
+![Refund Notification Flow](../refund_notify_call.svg)
 
 ### Parameters
 
@@ -30,4 +34,3 @@ sha256(:refundToken + '|' + :oldStatus + '|' + :newStatus + '|' + :merchantSecre
 - `cancelled` – Refund cancelled or failed.
 
 {{% notice note %}}New statuses may be introduced in the future. Implementations should be able to discard any other statuses received.{{% /notice %}}
-
