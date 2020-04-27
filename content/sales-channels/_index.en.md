@@ -20,3 +20,10 @@ Merchants using a sales channel can review their payments in the Merchant's Pane
 The Sales Channel URL is <https://payment.paytrail.com/channel-payment>
 
 The purchase bundle is sent to the service as a `POST` query. When a payment is completed, the customer will be redirected back to the return address defined by the payment channel. The parameters used to determine that payment has been successful are also sent to the return address.
+
+### Limitations
+
+Currently, the Sales Channel feature has following limitations.
+
+* Refunds can not be processed through the Paytrail system.
+* Only bank buttons and _Visa/MasterCard_ are available as payment methods (_Collector_ and _MobilePay_ are unavailable).
