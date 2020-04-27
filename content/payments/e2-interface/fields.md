@@ -130,7 +130,9 @@ Product ID.
 Quantity of products. If a decimal number such as `0.5` is used, the Collector payment method will be hidden. Default is `1`.
 
 #### `ITEM_UNIT_PRICE[N]`
-The price for a single product. Required if product rows are included in data. If `VAT_IS_INCLUDED = 0`, this is price not including VAT. Price may be negative value if discount is given.
+The price for a single product with **up to two decimals**. Required if product rows are included in data.
+
+If `VAT_IS_INCLUDED = 0`, this is price not including VAT. Price may be negative value if discount is given.
 
 #### `ITEM_VAT_PERCENT[N]`
 VAT percent used for product. Required if product rows are included in data.
