@@ -44,18 +44,5 @@ to = "/404.html"
 status = 404
 force = false
 
-<<<<<<< HEAD
-# Netlify build plugins
-# See more info at https://docs.netlify.com/configure-builds/build-plugins/
-
-# Checks for any broken links on build
-# [[plugins]]
-# package = "netlify-plugin-checklinks"
-
-# Optimize web fonts
-[[plugins]]
-package = "netlify-plugin-subfont"
-=======
 [[plugins]]
 package = "netlify-plugin-checklinks"
->>>>>>> a0e3ef1... revert: feat(netlify): add plugin for optimizing web fonts
