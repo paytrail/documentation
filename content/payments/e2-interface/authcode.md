@@ -1,10 +1,17 @@
 ---
-title: "Calculating the Payment AUTHCODE"
+title: Calculating the AUTHCODE for E2 Payment
 draft: false
 weight: 3
 ---
 
-`AUTHCODE` is calculated by joining all fields listed in `PARAMS_IN`. Fields are joined by placing the `|` character (pipe, vertical bar) between each two fields. `AUTHCODE` is formed from this string by calculating a sum using algorithm from `ALG` field. This sum is converted to its 64 character hexadecimal form and lowercase letters are capitalized.
+The `AUTHCODE` for the E2 payment is calculated as follows:
+
+1. Join all fields listed in `PARAMS_IN` by placing the `|` character (pipe, vertical bar) between each two fields.
+2. Calculate a sum using the algorithm from the `ALG` field.
+3. Convert this hash to its 64-character hexadecimal form.
+4. Transform all the letters to uppercase.
+
+{{% notice note %}}In this example character set UTF-8 is used. Paytrail supports character sets UTF-8 and ISO-8859-1. Calculation for AUTHCODE has to be done using same character set that is used when sending the form to Paytrail. Paytrail’s service will detect the used character set and use the same character set when calculating the AUTHCODE.{{% /notice %}}
 
 ### Using All the Fields
 
@@ -36,153 +43,112 @@ This example covers sending payment information in the most complete form. This 
     <input name="URL_NOTIFY" type="hidden" value="http://www.example.com/notify">
     <input name="LOCALE" type="hidden" value="en_US">
     <input name="CURRENCY" type="hidden" value="EUR">
-    <input name="REFERENCE_NUMBER" type="hidden" value="">
-    <input name="PAYMENT_METHODS" type="hidden" value="">
+    <input name="REFERENCE_NUMBER" type="hidden" value="REF-0001">
+    <input name="PAYMENT_METHODS" type="hidden" value="1">
     <input name="PAYER_PERSON_PHONE" type="hidden" value="01234567890">
     <input name="PAYER_PERSON_EMAIL" type="hidden" value="john.doe@example.com">
     <input name="PAYER_PERSON_FIRSTNAME" type="hidden" value="John">
     <input name="PAYER_PERSON_LASTNAME" type="hidden" value="Doe">
-    <input name="PAYER_COMPANY_NAME" type="hidden" value="Test company">
-    <input name="PAYER_PERSON_ADDR_STREET" type="hidden" value="Test street 1">
+    <input name="PAYER_COMPANY_NAME" type="hidden" value="Test Company">
+    <input name="PAYER_PERSON_ADDR_STREET" type="hidden" value="Test Street 1">
     <input name="PAYER_PERSON_ADDR_POSTAL_CODE" type="hidden" value="608009">
-    <input name="PAYER_PERSON_ADDR_TOWN" type="hidden" value="Test town">
+    <input name="PAYER_PERSON_ADDR_TOWN" type="hidden" value="Test Town">
     <input name="PAYER_PERSON_ADDR_COUNTRY" type="hidden" value="AA">
     <input name="VAT_IS_INCLUDED" type="hidden" value="1">
     <input name="ALG" type="hidden" value="1">
-    <input name="AUTHCODE" type="hidden" value="EAC78AB322614BB98F43FFF2EF55E71075DDC79634EA728C9C842EFF8E0AC0C9">
+    <input name="AUTHCODE" type="hidden" value="661A6766D2FCC6768232D54A0DC634D812619D32F71DFA56F8A3B61FDFD77262">
   <input type="submit" value="Pay here">
 </form>
 ```
 
-#### `MERCHANT AUTHENTICATION HASH`
-`6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
+* **Merchant Authentication Hash**: `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
 
-#### `MERCHANT_ID`
-`13466`
+* **MERCHANT_ID**: `13466`
 
-#### `URL_SUCCESS`
-<http://www.example.com/success>
+* **URL_SUCCESS**: <http://www.example.com/success>
 
-#### `URL_CANCEL`
-<http://www.example.com/cancel>
+* **URL_CANCEL**: <http://www.example.com/cancel>
 
-#### `ORDER_NUMBER`
-`123456`
+* **ORDER_NUMBER**: `123456`
 
-#### `PARAMS_IN`
-`MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,ITEM_TITLE[0],ITEM_ID[0],ITEM_QUANTITY[0],ITEM_UNIT_PRICE[0],ITEM_VAT_PERCENT[0],ITEM_DISCOUNT_PERCENT[0],ITEM_TYPE[0],ITEM_TITLE[1],ITEM_ID[1],ITEM_QUANTITY[1],ITEM_UNIT_PRICE[1],ITEM_VAT_PERCENT[1],ITEM_DISCOUNT_PERCENT[1],ITEM_TYPE[1],MSG_UI_MERCHANT_PANEL,URL_NOTIFY,LOCALE,CURRENCY,REFERENCE_NUMBER,PAYMENT_METHODS,PAYER_PERSON_PHONE,PAYER_PERSON_EMAIL,PAYER_PERSON_FIRSTNAME,PAYER_PERSON_LASTNAME,PAYER_COMPANY_NAME,PAYER_PERSON_ADDR_STREET,PAYER_PERSON_ADDR_POSTAL_CODE,PAYER_PERSON_ADDR_TOWN,PAYER_PERSON_ADDR_COUNTRY,VAT_IS_INCLUDED,ALG`
+* **PARAMS_IN**: `MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,ITEM_TITLE[0],ITEM_ID[0],ITEM_QUANTITY[0],ITEM_UNIT_PRICE[0],ITEM_VAT_PERCENT[0],ITEM_DISCOUNT_PERCENT[0],ITEM_TYPE[0],ITEM_TITLE[1],ITEM_ID[1],ITEM_QUANTITY[1],ITEM_UNIT_PRICE[1],ITEM_VAT_PERCENT[1],ITEM_DISCOUNT_PERCENT[1],ITEM_TYPE[1],MSG_UI_MERCHANT_PANEL,URL_NOTIFY,LOCALE,CURRENCY,REFERENCE_NUMBER,PAYMENT_METHODS,PAYER_PERSON_PHONE,PAYER_PERSON_EMAIL,PAYER_PERSON_FIRSTNAME,PAYER_PERSON_LASTNAME,PAYER_COMPANY_NAME,PAYER_PERSON_ADDR_STREET,PAYER_PERSON_ADDR_POSTAL_CODE,PAYER_PERSON_ADDR_TOWN,PAYER_PERSON_ADDR_COUNTRY,VAT_IS_INCLUDED,ALG`
 
-#### `PARAMS_OUT`
-`ORDER_NUMBER,PAYMENT_ID,AMOUNT,CURRENCY,PAYMENT_METHOD,TIMESTAMP,STATUS`
+* **PARAMS_OUT**: `ORDER_NUMBER,PAYMENT_ID,AMOUNT,CURRENCY,PAYMENT_METHOD,TIMESTAMP,STATUS`
 
-#### `ITEM_TITLE`
-Product 101
+* **ITEM_TITLE**: `Product 101`
 
-#### `ITEM_ID`
-Product 101
+* **ITEM_ID**: `101`
 
-#### `ITEM_QUANTITY`
-`2`
+* **ITEM_QUANTITY**: `2`
 
-#### `ITEM_UNIT_PRICE`
-`300.00`
+* **ITEM_UNIT_PRICE**: `300.00`
 
-#### `ITEM_VAT_PERCENT`
-`15.00`
+* **ITEM_VAT_PERCENT**: `15.00`
 
-#### `ITEM_DISCOUNT_PERCENT`
-`50`
+* **ITEM_DISCOUNT_PERCENT**: `50`
 
-#### `ITEM_TYPE`
-`1`
+* **ITEM_TYPE**: `1`
 
-#### `ITEM_TITLE`
-Product 101
+* **ITEM_TITLE**: `Product 202`
 
-#### `ITEM_ID`
-`202`
+* **ITEM_ID**: `202`
 
-#### `ITEM_QUANTITY`
-`4`
+* **ITEM_QUANTITY**: `4`
 
-#### `ITEM_UNIT_PRICE`
-12.50
+* **ITEM_UNIT_PRICE**: `12.50`
 
-#### `ITEM_VAT_PERCENT`
-`0`
+* **ITEM_VAT_PERCENT**: `0`
 
-#### `ITEM_DISCOUNT_PERCENT`
-`0`
+* **ITEM_DISCOUNT_PERCENT**: `0`
 
-#### `ITEM_TYPE`
-`1`
+* **ITEM_TYPE**: `1`
 
-#### `MSG_UI_MERCHANT_PANEL`
-Order 123456
+* **MSG_UI_MERCHANT_PANEL**: `Order 123456`
 
-#### `URL_NOTIFY`
-<http://www.example.com/notify>
+* **URL_NOTIFY**: <http://www.example.com/notify>
 
-#### `LOCALE`
-`en_US`
+* **LOCALE**: `en_US`
 
-#### `CURRENCY`
-`EUR`
+* **CURRENCY**: `EUR`
 
-#### `REFERENCE_NUMBER`
-`REF-0001`
+* **REFERENCE_NUMBER**: `REF-0001`
 
-#### `PAYMENT_METHODS`
-`1`
+* **PAYMENT_METHODS**: `1`
 
-#### `PAYER_PERSON_PHONE`
-`01234567890`
+* **PAYER_PERSON_PHONE**: `01234567890`
 
-#### `PAYER_PERSON_EMAIL`
-`john.doe@example.com`
+* **PAYER_PERSON_EMAIL**: `john.doe@example.com`
 
-#### `PAYER_PERSON_FIRSTNAME`
-John
+* **PAYER_PERSON_FIRSTNAME**: `John`
 
-#### `PAYER_PERSON_LASTNAME`
-Doe
+* **PAYER_PERSON_LASTNAME**: `Doe`
 
-#### `PAYER_COMPANY_NAME`
-Test company
+* **PAYER_COMPANY_NAME**: `Test Company`
 
-#### `PAYER_PERSON_ADDR_STREET`
-Test street 1
+* **PAYER_PERSON_ADDR_STREET**: `Test Street 1`
 
-#### `PAYER_PERSON_ADDR_POSTAL_CODE`
-608009
+* **PAYER_PERSON_ADDR_POSTAL_CODE**: `608009`
 
-#### `PAYER_PERSON_ADDR_TOWN`
-Test town
+* **PAYER_PERSON_ADDR_TOWN**: `Test Town`
 
-#### `PAYER_PERSON_ADDR_COUNTRY`
-`AA`
+* **PAYER_PERSON_ADDR_COUNTRY**: `AA`
 
-#### `VAT_IS_INCLUDED`
-`1`
+* **VAT_IS_INCLUDED**: `1`
 
-#### `ALG`
-`1`
-
-#### `AUTHCODE`
-`EAC78AB322614BB98F43FFF2EF55E71075DDC79634EA728C9C842EFF8E0AC0C9`
+* **ALG**: `1`
 
 ### Calculation Formula
 
 Now the string to be used for `AUTHCODE` calculation is formed by joining the fields above:
 
 ```plain
-6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ|13466|http://www.example.com/success|http://www.example.com/cancel|123456|MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,ITEM_TITLE[0],ITEM_ID[0],ITEM_QUANTITY[0],ITEM_UNIT_PRICE[0],ITEM_VAT_PERCENT[0],ITEM_DISCOUNT_PERCENT[0],ITEM_TYPE[0],ITEM_TITLE[1],ITEM_ID[1],ITEM_QUANTITY[1],ITEM_UNIT_PRICE[1],ITEM_VAT_PERCENT[1],ITEM_DISCOUNT_PERCENT[1],ITEM_TYPE[1],MSG_UI_MERCHANT_PANEL,URL_NOTIFY,LOCALE,CURRENCY,REFERENCE_NUMBER,PAYMENT_METHODS,PAYER_PERSON_PHONE,PAYER_PERSON_EMAIL,PAYER_PERSON_FIRSTNAME,PAYER_PERSON_LASTNAME,PAYER_COMPANY_NAME,PAYER_PERSON_ADDR_STREET,PAYER_PERSON_ADDR_POSTAL_CODE,PAYER_PERSON_ADDR_TOWN,PAYER_PERSON_ADDR_COUNTRY,VAT_IS_INCLUDED,ALG|ORDER_NUMBER,PAYMENT_ID,AMOUNT,CURRENCY,PAYMENT_METHOD,TIMESTAMP,STATUS|Product 101|101|2|300.00|15.00|50|1|Product 202|202|4|12.50|0|0|1|Order 123456|http://www.example.com/notify|en_US|EUR|||01234567890|john.doe@example.com|John|Doe|Test company|Test street 1|608009|Test town|AA|1|1
+6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ|13466|http://www.example.com/success|http://www.example.com/cancel|123456|MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,ITEM_TITLE[0],ITEM_ID[0],ITEM_QUANTITY[0],ITEM_UNIT_PRICE[0],ITEM_VAT_PERCENT[0],ITEM_DISCOUNT_PERCENT[0],ITEM_TYPE[0],ITEM_TITLE[1],ITEM_ID[1],ITEM_QUANTITY[1],ITEM_UNIT_PRICE[1],ITEM_VAT_PERCENT[1],ITEM_DISCOUNT_PERCENT[1],ITEM_TYPE[1],MSG_UI_MERCHANT_PANEL,URL_NOTIFY,LOCALE,CURRENCY,REFERENCE_NUMBER,PAYMENT_METHODS,PAYER_PERSON_PHONE,PAYER_PERSON_EMAIL,PAYER_PERSON_FIRSTNAME,PAYER_PERSON_LASTNAME,PAYER_COMPANY_NAME,PAYER_PERSON_ADDR_STREET,PAYER_PERSON_ADDR_POSTAL_CODE,PAYER_PERSON_ADDR_TOWN,PAYER_PERSON_ADDR_COUNTRY,VAT_IS_INCLUDED,ALG|ORDER_NUMBER,PAYMENT_ID,AMOUNT,CURRENCY,PAYMENT_METHOD,TIMESTAMP,STATUS|Product 101|101|2|300.00|15.00|50|1|Product 202|202|4|12.50|0|0|1|Order 123456|http://www.example.com/notify|en_US|EUR|REF-0001|1|01234567890|john.doe@example.com|John|Doe|Test Company|Test Street 1|608009|Test Town|AA|1|1
 ```
 
 **SHA-256** sum is counted from this string (note uppercase):
 
 ```plain
-EAC78AB322614BB98F43FFF2EF55E71075DDC79634EA728C9C842EFF8E0AC0C9
+661A6766D2FCC6768232D54A0DC634D812619D32F71DFA56F8A3B61FDFD77262
 ```
 
 ### Using Only the Required Fields
@@ -201,40 +167,29 @@ EAC78AB322614BB98F43FFF2EF55E71075DDC79634EA728C9C842EFF8E0AC0C9
 </form>
 ```
 
-#### `MERCHANT AUTHENTICATION HASH`
-`6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
+* **MERCHANT AUTHENTICATION HASH**: `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
 
-#### `MERCHANT_ID`
-`13466`
+* **MERCHANT_ID**: `13466`
 
-#### `URL_SUCCESS`
-<http://www.example.com/success>
+* **URL_SUCCESS**: <http://www.example.com/success>
 
-#### `URL_CANCEL`
-<http://www.example.com/cancel>
+* **URL_CANCEL**: <http://www.example.com/cancel>
 
-#### `ORDER_NUMBER`
-`123456`
+* **ORDER_NUMBER**: `123456`
 
-#### `PARAMS_IN`
-`MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,AMOUNT`
+* **PARAMS_IN**: `MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,AMOUNT`
 
-#### `PARAMS_OUT`
-`PAYMENT_ID,TIMESTAMP,STATUS`
+* **PARAMS_OUT**: `PAYMENT_ID,TIMESTAMP,STATUS`
 
-#### `AMOUNT`
-`350.00`
+* **AMOUNT**: `350.00`
 
-#### `AUTHCODE`
-`BBDF8997A56F97DC0A46C99C88C2EEF9D541AAD59CFF2695D0DD9AF474086D71`
-
-Now the string to be used for `AUTHCODE` calculation is formed by joining the fields above:
+The string used to calculate `AUTHCODE` is created by combining fields above.
 
 ```plain
 6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ|13466|http://www.example.com/success|http://www.example.com/cancel|123456|MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,AMOUNT|PAYMENT_ID,TIMESTAMP,STATUS|350.00
 ```
 
-**SHA-256** sum is counted from this string (note uppercase): 
+**SHA-256** sum is computed from this string (note uppercase):
 
 ```plain
 BBDF8997A56F97DC0A46C99C88C2EEF9D541AAD59CFF2695D0DD9AF474086D71
