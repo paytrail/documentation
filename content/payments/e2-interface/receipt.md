@@ -10,6 +10,8 @@ After the payment has been successfully completed, the customer is redirected to
 
 The notification address (`URL_NOTIFY`) is called when Paytrail marks the payment as completed. Typically this happens within a few minutes after redirecting the customer to `URL_SUCCESS`. Note that in some rare cases `URL_NOTIFY` is called before the customer is redirected to `URL_SUCCESS`. `URL_NOTIFY` call includes parameters defined in `PARAMS_OUT_NOTIFY`. The received notification must be acknowledged by responding with an HTTP status in the _200-299_ range.
 
+{{< notice note >}}Please note that it is possible that `URL_SUCCESS` and/or `URL_NOTIFY` are called for a payment after `URL_CANCEL` has been called. Thus, a call to `URL_CANCEL` should not delete the order, or place it into a status that can not be changed to paid if a call is made to `URL_SUCCESS` or `URL_NOTIFY`.{{< /notice >}}
+
 If the customer does not return to Paytrail's service from the payment method provider's service, the information on successful payment will not be immediately available. In this case `URL_NOTIFY` will be called immediately when that information has arrived. We use payment status query services provided by payment method providers to speed up the process of payment being marked as completed. When we receive information on payment being completed the notification address is called.
 
 In cases where payment method provider does not provide payment status query service, information about completed payment arrives on the next banking day. The only payment method provider currently not providing payment status query service is Ålandsbanken.
