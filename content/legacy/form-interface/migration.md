@@ -1,5 +1,5 @@
 ---
-title: "Migrating E1 to E2 and S1 to S2"
+title: "Migrating from S1 and E1 to E2"
 draft: false
 ---
 
