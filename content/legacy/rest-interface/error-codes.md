@@ -23,7 +23,7 @@ Sent reference number (`referenceNumber`) incorrect. The reference number must c
 #### `invalid-reference-number-used`
 Sent reference number (`referenceNumber`) incorrect. The reference number has been used for another payment.
 
-#### `invalid-description,`
+#### `invalid-description`
 Order description (`description`) incorrect.
 
 #### `invalid-url-set`
