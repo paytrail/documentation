@@ -84,5 +84,5 @@ Content-Type: application/json
 ##### `invalid-date-range (404)`
 Invalid date range. Check that date range is not over two months.
 
-##### `invalid-date-format` (404)`
+##### `invalid-date-format (404)`
 Invalid date format. Check that date format is correct (`YYYY-MM-DD`).
