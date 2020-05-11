@@ -17,15 +17,20 @@ API requests are authenticated through HTTP authentication. See _Authorization_ 
   
 #### Calculation Formula
 
-```php
-$authenticationHash = base64_encode(hash_hmac('sha256', implode("\n", [
-   $method,
-   $url,
-   "PaytrailMerchantAPI {$merchantId}",
-   $timestamp,
-   $contentMd5,
-]), $merchantSecret, true));
-```
+$authenticationHash = base64_encode(
+    hash_hmac(
+        'sha256',
+        implode("\n", [
+            $method,
+            $url,
+            "PaytrailMerchantAPI {$merchantId}",
+            $timestamp,
+            $contentMd5,
+        ]),
+        $merchantSecret,
+        true
+    )
+);
 
 MD5 hash is calculated from content
 ```php
