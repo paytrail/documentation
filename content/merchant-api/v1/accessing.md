@@ -13,6 +13,7 @@ API requests are authenticated through HTTP authentication. See _Authorization_ 
 - **Timestamp**: Request timestamp. Must be the same as what is used for signature calculation.
 - **Content-MD5:** Base64 encoded MD5 sum for the request body contents. For GET requests content is always empty and content-MD5 is calculated of empty string.
 - **Authorization:** Authentication details. Format is `PaytrailMerchantAPI <merchant id>:<signature>`. The value is a Base 64 encoding of binary SHA256 MAC of the request details using merchant secret as the secret key.
+- **Refund-Origin** If using Payment ID from payment return parameters, this field is required and value is set to `internal`. Using Payment ID is recommended, since it's always unique value unlike order number.
   
 #### Calculation Formula
 
