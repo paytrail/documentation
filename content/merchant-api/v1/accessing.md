@@ -13,47 +13,51 @@ API requests are authenticated through HTTP authentication. See _Authorization_ 
 - **Timestamp**: Request timestamp. Must be the same as what is used for signature calculation.
 - **Content-MD5:** Base64 encoded MD5 sum for the request body contents. For GET requests content is always empty and content-MD5 is calculated of empty string.
 - **Authorization:** Authentication details. Format is `PaytrailMerchantAPI <merchant id>:<signature>`. The value is a Base 64 encoding of binary SHA256 MAC of the request details using merchant secret as the secret key.
+- **Refund-Origin:** If using Payment ID from payment return parameters, this field is required and value is set to `internal`. Using Payment ID is recommended, since it's always unique value unlike order number.
   
 #### Calculation Formula
 
-```rb
-base64_encode(
-    hmac_sha256_binary(
-        :requestMethod + "\n" +
-            :url + "\n" +
-            "PaytrailMerchantAPI " + :merchantId + "\n" +
-            :timestamp + "\n" +
-            :base64ContentMd5,
-        :merchantSecret
+```php
+$authenticationHash = base64_encode(
+    hash_hmac(
+        'sha256',
+        implode("\n", [
+            $method,
+            $url,
+            "PaytrailMerchantAPI {$merchantId}",
+            $timestamp,
+            $contentMd5,
+        ]),
+        $merchantSecret,
+        true
     )
-)
+);
 ```
+
+MD5 hash is calculated from content
+```php
+$contentMd5 = base64_encode(hash('md5', $content, true));
+```
+In case of `GET` and `POST` requests there is no content in message and `$content` is just empty string in content MD5 calculation.
 
 #### Example Signature Calculation for Refund Creation
 
 - **API Key (Merchant ID):** `13466`
 - **Merchant Secret:** `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
-- **Timestamp:** `2020-03-09T12:00:00+0200`
-- **Order Number:**	`15153`
-- **URL:** `/merchant/v1/payments/15153/refunds`
+- **Timestamp:** `2020-05-01T12:00:00+0300`
+- **Order Number:**	`102402728626`
+- **URL:** `https://api.paytrail.com/merchant/v1/payments/102402728626/refunds`
 - **Method:** `POST`
+- **Content MD5:** `nYDNvmvsxI4ZxJL8OghRTw==` 
 - **Content:**
 
 ```json
-{
-    "email": "john.doe@mycustomer.com",
-    "notifyUrl": "https://example.com/notify",
-    "rows": [
-        {
-            "amount": 1599,
-            "description": "Long sleeve shirt",
-            "vatPercent": 2400
-        }
-    ]
-}
+{"rows":[{"amount":1000,"description":"Test Product","vatPercent":2400}],"email":"customer@email.com","notifyUrl":"https:\/\/url.to.shop\/apiNotification\/"}
 ```
 
-Note that there are no newlines before or after first and last curly braces. Newline character here is `\n`.
+Calculated authentication hash in this case is `YqpU4WCsnBn7XLOqNd29bu/qfybVP4kIsbeOKOrSifU=`.
+
+More detailed PHP example can be found from our [**examples**][examples-gh].
 
 ### Responses
 
@@ -98,3 +102,5 @@ Refunding service is currently unavailable. Please try again later.
   }
 }
 ```
+
+[examples-gh]: https://github.com/paytrail/examples/blob/master/PHP/CalculateMerchantApiHash.php
