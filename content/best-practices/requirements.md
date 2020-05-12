@@ -10,7 +10,7 @@ A number of payment methods have strict requirements when posting a new payment 
 
 ### Collector
 
-* VAT must be enabled (`VAT_IS_INCLUDED = 1`).
+* VAT must be included in the price (`VAT_IS_INCLUDED = 1`).
 * Item quantity (`ITEM_QUANTITY[N]`) should be an integer.
 * Product details should be sent with the `ITEM_*` fields.
 * Customer details should be sent with the `PAYER_PERSON_*` fields.
