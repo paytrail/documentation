@@ -17,6 +17,7 @@ API requests are authenticated through HTTP authentication. See _Authorization_ 
   
 #### Calculation Formula
 
+```php
 $authenticationHash = base64_encode(
     hash_hmac(
         'sha256',
@@ -31,6 +32,7 @@ $authenticationHash = base64_encode(
         true
     )
 );
+```
 
 MD5 hash is calculated from content
 ```php
@@ -46,7 +48,7 @@ In case of `GET` and `POST` requests there is no content in message and `$conten
 - **Order Number:**	`102402728626`
 - **URL:** `https://api.paytrail.com/merchant/v1/payments/102402728626/refunds`
 - **Method:** `POST`
-- **Content MD5** `nYDNvmvsxI4ZxJL8OghRTw==` 
+- **Content MD5:** `nYDNvmvsxI4ZxJL8OghRTw==` 
 - **Content:**
 
 ```json
