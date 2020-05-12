@@ -101,4 +101,4 @@ Refunding service is currently unavailable. Please try again later.
 }
 ```
 
-[examples-gh]: https://github.com/paytrail/examples
+[examples-gh]: https://github.com/paytrail/examples/blob/master/PHP/CalculateMerchantApiHash.php
