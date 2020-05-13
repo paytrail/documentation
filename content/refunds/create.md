@@ -9,22 +9,40 @@ weight: 1
 Refunds are created using order numbers as identifiers. Merchants must use unique order numbers for Paytrail Merchant API to be able to link each refund to a single payment. The customer will be sent an email upon successful refund creation. Successful refund creation will return **HTTP status `202`** and refund location (link with a refund token). See section [General HTTP responses][responses].
 
 ```http
-POST /merchant/v1/payments/:orderNumber/refunds
+POST /merchant/v1/payments/:orderNumber/refunds HTTP/1.1
 ```
 
 ### Parameters
 
-- `email` (`string`, **optional**) \
-  When specified, the given email will be used for the refund. Required if the payment was made through the S1 interface if payment is not paid using card (email is not required for card payments).
-- `rows` (`array [1, 500]`, **required**)
-  - `amount` (`integer`, **required**) \
-    How much money to refund in cents (`>0–2000000`) with VAT included. The payment must have this much money left to refund, and for the right VAT percent, in case E1 or E2 interface with product rows was used.
-  - `vatPercent` (`integer`, **required/not allowed**) \
-    Which VAT percent to allocate the refund to, expressed in fractions of a hundred (0 – 10 000).
-  - `description` (`string`, **optional**) \
-    Description for the refund shown as product row name. This is visible to the customer as well.
-- `notifyUrl` (`string`, **optional**) \
-  A Valid webhook URL to call when a refund's status updates.
+#### `email`
+**Type:** `String`
+
+When specified, the given email will be used for the refund. Required if the payment was made through the S1 interface if payment is not paid using card (email is not required for card payments).
+
+#### `rows`
+**Type:** `Array[1, 500]`
+
+Required. List containing the refunded rows.
+
+#### `rows[].amount`
+**Type:** `Integer`
+
+Required. How much money to refund in cents (**1–2000000**) with VAT included. The payment must have this much money left to refund, and for the right VAT percent, in case E1 or E2 interface with product rows was used.
+
+#### `rows[].vatPercent`
+**Type:** `Integer`
+
+Required. Which VAT percent to allocate the refund to, expressed in fractions of a hundred (**0–10000**).
+
+#### `rows[].description`
+**Type:** `String`
+
+Description for the refund shown as product row name. This is visible to the customer as well.
+
+#### `notifyUrl`
+**Type:** `string`
+
+A valid webhook URL to call when a refund's status updates.
 
 [responses]: {{< relref "merchant-api/v1/accessing#responses" >}}
 

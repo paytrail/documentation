@@ -16,21 +16,39 @@ If an update is not acknowledged by the receiving end, the update to that refund
 
 ### Parameters
 
-- `refundToken` – Refund token.
-- `oldStatus` – Refund's previous status.
-- `newStatus` – Refund's new status
-- `signature` – Signature to ensure the update comes from Paytrail.
-  
-Signature is calculated with the following formula: 
+#### `refundToken`
+**Type:** `String`
 
-```rb
-sha256(:refundToken + '|' + :oldStatus + '|' + :newStatus + '|' + :merchantSecret)
+Refund token.
+
+#### `oldStatus`
+**Type:** `String`
+
+Refund's previous status.
+
+#### `newStatus`
+**Type:** `String`
+
+Refund's new status.
+
+#### `signature`
+**Type:** `String`
+
+Signature to ensure the update comes from Paytrail. Signature is calculated with the following formula.
+
+```js
+sha256(refundToken + '|' + oldStatus + '|' + newStatus + '|' + merchantSecret)
 ```
 
 ### Refund Statuses
 
-- `created` – Refund was created. Never used as `newStatus`, since notify is not sent when a refund is created.
-- `completed` – Refund paid to customer. For bank or _Collector_ refund, amount is deducted from merchant's settlement.
-- `cancelled` – Refund cancelled or failed.
+#### `created`
+Refund was created. Never used as `newStatus`, since notify is not sent when a refund is created.
+
+#### `completed`
+Refund paid to customer. For bank or _Collector_ refund, amount is deducted from merchant's settlement.
+
+#### `cancelled`
+Refund cancelled or failed.
 
 {{% notice note %}}New statuses may be introduced in the future. Implementations should be able to discard any other statuses received.{{% /notice %}}
