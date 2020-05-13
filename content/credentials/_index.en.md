@@ -9,7 +9,7 @@ weight: 6
 
 **Paytrail Payment Service** is testable using merchant ID `13466` and merchant secret `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`. These test credentials work with [form interface][form], [REST interface][rest] and payment method selection page embedding.
 
-[form]: {{< ref "form-interface" >}}
+[form]: {{< ref "payments" >}}
 [rest]: {{< ref "rest-interface" >}}
 
 **Shopify** gateway is testable using merchant ID `13466` and Shopify token `d3d86c09e781a00dda469e420166623f67a618e6`.
