@@ -20,6 +20,6 @@ JavaScript interface offers two methods; one is used for the chosen payment inte
 
 The widget version **1.0** can be downloaded [**here**][widget] (_18 KB, minified_).
 
-[form]: {{< ref "form-interface" >}}
+[form]: {{< ref "payments" >}}
 [rest]: {{< ref "rest-interface" >}}
 [widget]: https://payment.paytrail.com/js/payment-widget-v1.0.min.js
