@@ -9,7 +9,7 @@ weight: 1
 Returns settlements created between selected time span.
 
 ```http
-GET /merchant/v1/settlements?fromDate=from&toDate=to
+GET /merchant/v1/settlements?fromDate=from&toDate=to HTTP/1.1
 ```
 
 ### Parameters

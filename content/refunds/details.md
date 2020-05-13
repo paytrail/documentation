@@ -11,12 +11,15 @@ weight: 2
 Returns refund details.
 
 ```http
-GET /merchant/v1/refunds/:id
+GET /merchant/v1/refunds/:id HTTP/1.1
 ```
 
 ### Parameters
 
-- `id` (`string`, **required**) Refund token whose details are requested.
+#### `id`
+**Type:** `String`
+
+Required. Refund token whose details are requested.
 
 ### Request
 
@@ -39,8 +42,6 @@ Content-Type: application/json
 **Body:**
 
 ```json
-HTTP/1.1 200 OK
-Content-Type: application/json
 {
     "id": "DA2OTA4NWVmYTRiMDUyMWI4OGNkNjkxNzBh",
     "createdAt": "2015-01-02T14:00:02+00:00",
@@ -59,4 +60,6 @@ Content-Type: application/json
 
 ### Resource Specific Error Messages
 
-- `invalid-refund-token` (**Code:** `404`) Invalid refund token. Check refund token. You can check the value from Merchant's Panel.
+#### `invalid-refund-token (404)`
+
+Invalid refund token. Check refund token. You can check the value from Merchant's Panel.

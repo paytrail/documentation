@@ -9,7 +9,7 @@ weight: 2
 Returns settlement details.
 
 ```http
-GET /merchant/v1/settlements/:id
+GET /merchant/v1/settlements/:id HTTP/1.1
 ```
 
 #### Request
