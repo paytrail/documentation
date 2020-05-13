@@ -7,6 +7,6 @@ type: docs
 weight: 4
 ---
 
-See this section for creating, querying, and cancelling refunds via [Paytrail Merchant API][api].
+See this section for creating, querying, and cancelling refunds via **Paytrail Merchant API**. Accessing the API is described [**here**][api].
 
-[api]: {{< ref "merchant-api" >}}
+[api]: {{< ref "merchant-api/v1/accessing" >}}
