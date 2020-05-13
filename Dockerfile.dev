@@ -1,9 +1,0 @@
-FROM registry.gitlab.com/pages/hugo/hugo_extended:latest AS build
-
-RUN apk update && apk add --no-cache build-base git
-
-WORKDIR /src
-COPY . .
-
-EXPOSE 1313
-CMD [ "make", "start" ]

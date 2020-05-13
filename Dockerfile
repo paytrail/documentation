@@ -1,12 +1,17 @@
-FROM registry.gitlab.com/pages/hugo/hugo_extended:latest AS build
+FROM registry.gitlab.com/pages/hugo/hugo_extended:latest AS development
 
 RUN apk update && apk add --no-cache build-base git
 
 WORKDIR /src
 COPY . .
+
+CMD ["make", "start"]
+
+FROM development AS build
+
 RUN make build
 
-FROM nginx:1.17-alpine
+FROM nginx:1.17-alpine AS production
 
 COPY conf/nginx.conf /etc/nginx
 COPY conf/default.conf /etc/nginx/conf.d

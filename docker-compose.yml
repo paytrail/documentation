@@ -4,7 +4,8 @@ services:
     hugo:
         build:
             context: .
-            dockerfile: Dockerfile.dev
+            dockerfile: Dockerfile
+            target: development
         container_name: hugo-dev
         volumes:
             - ${PWD}:/src
