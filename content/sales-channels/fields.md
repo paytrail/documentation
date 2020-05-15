@@ -8,6 +8,8 @@ The list below describes the fields that should be sent to Paytrail’s payment 
 
 {{% notice note %}}No value for field should contain “|”. Pipe characters should be replaced by another character before the data is sent to Paytrail’s payment service. If special characters have to be used in the return address, we recommend encoding the return address URL (e.g. function urlencode() in PHP). For example, the pipe character must be replaced with a string “%C7”.{{% /notice %}}
 
+Required fields are marked with an asterisk (*).
+
 #### `CHANNEL_ID (*)`
 **Type:** `Number[11]`
 
@@ -172,3 +174,17 @@ If product has a discount, this defines the discount percentage. The value can b
 **Type:** `Number[2]`
 
 Type can be defined for every item row. Type `1` (default) means normal product, `2` shipping, and `3` handling.
+
+## Supported Payment Methods
+
+* **1** _Nordea_
+* **2** _Osuuspankki_
+* **3** _Danske Bank_
+* **5** _Ålandsbanken_
+* **6** _Handelsbanken_
+* **10** _S-Pankki_
+* **50** _Aktia_
+* **51** _POP Pankki_
+* **52** _Säästöpankki_
+* **53** _Visa (Nets)_
+* **54** _MasterCard (Nets)_
