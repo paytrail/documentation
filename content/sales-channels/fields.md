@@ -188,3 +188,4 @@ Type can be defined for every item row. Type `1` (default) means normal product,
 * **52** _Säästöpankki_
 * **53** _Visa (Nets)_
 * **54** _MasterCard (Nets)_
+* **61** _Oma Säästöpankki_
