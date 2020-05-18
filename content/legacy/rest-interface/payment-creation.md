@@ -28,6 +28,9 @@ Payment currency. Value must be EUR for Finnish banks, otherwise the payment wil
 - `locale` (all characters[5], optional) \
 Localisation defines default language for the payment method selection page and presentation format for the sums. Available localisations are `fi_FI` , `sv_SE` and `en_US`. The default localisation is `fi_FI`.
 
+- `price` (decimal number[10], optional) \
+  Payment total. Send either exact payment data (`orderDetails`) or the payment total to the service. If you send only the payment total price, (_Klarna_ and _Collector_) invoice and instalment payment methods are not available and order details cannot be shown in the Merchant's Panel. We recommend using `orderDetails` record whenever it is possible. The value of price must be greater or equal than `0.65`.
+
 - `urlSet` (required)
 
   - `success` (all characters[2048], required) \
@@ -83,9 +86,6 @@ Either `orderDetails` or payment sum price has to be specified. `orderDetails` r
         If you have reduced the product price, you can show the discount percentage as a figure between 0 and 100 in this field. Default is 0.
       - `type` (integer[1], optional) \
         A type can be specified for the product row. `1` = normal product row, `2` = shipping, `3` = handling. `1` can be used for all rows, but shipping and handling costs cannot be differentiated from the other rows. Default is `1`.
-      - `price` (decimal number[10], optional) \
-        Payment total. Send either exact payment data (`orderDetails`) or the payment total to the service. If you send only the payment total price, (_Klarna_ and _Collector_) invoice and instalment payment methods are not available and order details cannot be shown in the Merchant's Panel. We recommend using `orderDetails` record whenever it is possible. The value of price must be greater or equal than `0.65`.
-
 ### Response
 
 The service responds to request in the same format (_XML_ or _JSON_) as it was received. Return record root element is also called payment and it contains the following records:
