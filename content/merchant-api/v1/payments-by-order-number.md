@@ -1,15 +1,15 @@
 ---
-title: "Payments by order number"
+title: "Fetching payments by Order number"
 draft: false
 weight: 3
 ---
 
 ### Route
 
-Merchant API payments by order number feature is not available for demo merchant (13466).
+{{< notice note >}}Merchant API payments by order number feature is not available for demo merchant (13466).{{< /notice >}}
 
 ```http
-GET /merchant/v1/payments?order_number=<order_number>
+GET /merchant/v1/payments?order_number=<order_number> HTTP/1.1
 ```
 
 Returns all matching payments in array of JSON objects.

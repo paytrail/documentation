@@ -6,10 +6,10 @@ weight: 4
 
 ### Route
 
-Merchant API payment details feature is not available for demo merchant (13466).
+{{< notice note >}}Merchant API payment details feature is not available for demo merchant (13466).{{< /notice >}}
 
 ```http
-GET /merchant/v1/payments/:id
+GET /merchant/v1/payments/:id HTTP/1.1
 ```
 
 Returns payment details.
