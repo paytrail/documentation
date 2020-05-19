@@ -1,7 +1,7 @@
 ---
 title: "Payment Status Queries"
 draft: false
-weight: 6
+weight: 7
 ---
 
 The status of an unique payment can be checked with an HTML `<form>`.

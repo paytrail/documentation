@@ -1,7 +1,9 @@
 ---
 title: Payment Receipts
-weight: 7
+weight: 6
 ---
+
+Using our **REST**, **S1**, and **E1** interfaces you can receive data on payment success or cancellation.
 
 After the payment has been successfully completed, the customer is redirected to the URL defined in the previous stage (`RETURN_ADDRESS`). If the payment was cancelled, the customer is directed to the cancelled payment URL (`CANCEL_ADDRESS`).
 
