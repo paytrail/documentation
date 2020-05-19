@@ -1,5 +1,5 @@
 ---
-title: "Payment Details"
+title: "Querying Payment Details"
 draft: false
 weight: 4
 ---

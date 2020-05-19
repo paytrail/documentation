@@ -1,5 +1,5 @@
 ---
-title: "Fetching payments by Order number"
+title: "Querying Payments by Order number"
 draft: false
 weight: 3
 ---
