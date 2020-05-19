@@ -1,7 +1,7 @@
 ---
 title: "Rest Interface"
 draft: false
-weight: 3
+weight: 5
 ---
 
 ### Description
@@ -37,6 +37,12 @@ Sent message type. The message can be sent either in XML or JSON format. Corresp
 **X-Verkkomaksut-Api-Version**
 
 Interface version. The current REST interface version is `1`. Each request sent to the interface must be verified with Basic authentication (Authorization header). Basic authentication sends the Merchant ID as a username and the Merchant secret as a password.
+
+### Receiving the Payment Receipt
+
+Payment receipt handling has been documented [**here**][receipt].
+
+[receipt]: {{< ref "legacy/receipts" >}}
 
 [rest-gh]: https://github.com/paytrail/rest-module
 [rest-packagist]: https://packagist.org/packages/paytrail/rest-module
