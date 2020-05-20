@@ -11,7 +11,7 @@ Structure for settlement detail information. Format is `Field name` type [max le
 - `settledAmount` number [50000000] \
 How much money was settled to merchant? Amount is in the currency's smallest unit. e.g. in Euro cents
 - `settledAt` date [timestamp || null] \
-When the settlement was paid to merchant's bank account. Can be null if it's not yet paid.
+When the settlement was paid to merchant's bank account, can be null if it's not yet paid
 - `currency` string [3] \
 ISO 3 letter symbol for settlement currency e.g. "EUR"
 - `payments` array \
@@ -23,9 +23,9 @@ ISO 3 letter symbol for settlement currency e.g. "EUR"
   - `status` string \
   Possible values: "waiting payment", "paid", "cancelled", "waiting acceptance"
   - `paymentMethodId` number \
-  Payment method id, see available methods from selection and visibility of payment methods. List of available methods is [**here**][payment-methods]
+  Payment method id, see available methods from selection and visibility of payment methods, list of available methods is [**here**][payment-methods]
   - `payerName`	string [32] \
-  Payer name, only available for bank payments
+  Payer account owner's name from bank files, only available for bank payments
   - `amounts` \
   Payment amounts object
     - `original` number [50000000] \
@@ -55,7 +55,7 @@ ISO 3 letter symbol for settlement currency e.g. "EUR"
   - `paymentServiceType` string \
   Possible values: "collecting", "direct"
   - `refunds` \
-  `0-N` Arefund objects (refunds linked to payment)
+  `0-N` Refund objects (refunds linked to payment)
     - `id` string [64]
     - `createdAt` date [timestamp]
     - `status` string \
