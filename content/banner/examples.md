@@ -4,26 +4,36 @@ draft: false
 weight: 3
 ---
 
-### Horizontal, 15 columns, with text
+In this page you can find examples how to implement the banner for your shop. We provide a preview image and a hyperlink for fetching the image.
 
-**URL:** <https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=15&text=1&auth=f6483cce23771e8f>
+***
 
-![Example 1](https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=15&text=1&auth=f6483cce23771e8f)
+{{< figure src="https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=15&text=1&auth=f6483cce23771e8f" alt="Example" caption="Horizontal, 15 columns, with text" >}}
 
-### Horizontal, 6 columns, without text
+```plain
+https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=15&text=1&auth=f6483cce23771e8f
+```
 
-**URL:** <https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=6&text=0&auth=f6483cce23771e8f>
+***
 
-![Example 2](https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=6&text=0&auth=f6483cce23771e8f)
+{{< figure src="https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=6&text=0&auth=f6483cce23771e8f" alt="Example" caption="Horizontal, 6 columns, without text" >}}
 
-### Vertical, 4 columns, without text
+```plain
+https://img.paytrail.com/index.svm?id=13466&type=horizontal&cols=6&text=0&auth=f6483cce23771e8f
+```
 
-**URL:** <https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=4&text=0&auth=f6483cce23771e8f>
+***
 
-![Example 3](https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=4&text=0&auth=f6483cce23771e8f)
+{{< figure src="https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=4&text=0&auth=f6483cce23771e8f" alt="Example" caption="Vertical, 4 columns, without text" >}}
 
-### Vertical, 2 columns, with text
+```plain
+https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=4&text=0&auth=f6483cce23771e8f
+```
 
-**URL:** <https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=2&text=1&auth=f6483cce23771e8f>
+***
 
-![Example 4](https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=2&text=1&auth=f6483cce23771e8f)
+{{< figure src="https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=2&text=1&auth=f6483cce23771e8f" alt="Example" caption="Vertical, 2 columns, with text" >}}
+
+```plain
+https://img.paytrail.com/index.svm?id=13466&type=vertical&cols=2&text=1&auth=f6483cce23771e8f
+```
