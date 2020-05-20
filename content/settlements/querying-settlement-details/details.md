@@ -15,15 +15,15 @@ When the settlement was paid to merchant's bank account. Can be null if it's not
 - `currency` string [3] \
 ISO 3 letter symbol for settlement currency e.g. "EUR"
 - `payments` array \
-`1-N` A payment objects
-  - `id`number [12]
+`1-N` Payment objects
+  - `id` number [12]
   - `referenceNumber` number [32]
   - `orderNumber` string [64]
   - `createdAt` date [timestamp]
   - `status` string \
   Possible values: "waiting payment", "paid", "cancelled", "waiting acceptance"
   - `paymentMethodId` number \
-  Payment method id, see available methods from selection and visibility of payment methods
+  Payment method id, see available methods from selection and visibility of payment methods. List of available methods is [**here**][payment-methods]
   - `payerName`	string [32] \
   Payer name, only available for bank payments
   - `amounts` \
@@ -55,7 +55,7 @@ ISO 3 letter symbol for settlement currency e.g. "EUR"
   - `paymentServiceType` string \
   Possible values: "collecting", "direct"
   - `refunds` \
-  `0-N` A refund objects (refunds linked to payment)
+  `0-N` Arefund objects (refunds linked to payment)
     - `id` string [64]
     - `createdAt` date [timestamp]
     - `status` string \
@@ -74,7 +74,7 @@ ISO 3 letter symbol for settlement currency e.g. "EUR"
     ISO 3 letter symbol for settlement currency e.g. "EUR"
     - `settlementId` string [64]
 - `refunds`	array \
-`0-N` A refund objects (refunds linked to settlement)
+`0-N` refund objects (refunds linked to settlement)
   - `id` string [64]
   - `createdAt`	date [timestamp]
   - `status` string \
@@ -92,3 +92,5 @@ ISO 3 letter symbol for settlement currency e.g. "EUR"
   - `currency` string [3] \
   ISO 3 letter symbol for settlement currency e.g. "EUR"
   - `settlementId` string [64]
+
+  [payment-methods]: {{< ref "payment-methods/values" >}}
