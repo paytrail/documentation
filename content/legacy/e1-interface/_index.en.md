@@ -8,4 +8,4 @@ This chapter describes how a web shop communicates with the payment gateway with
 
 {{% notice tip %}} Latest and recommended API version is E2.{{% /notice %}}
 
-{{< figure src="form-interface.svg" alt="Creating a Payment via the Form Interface" >}}
+{{< figure src="/images/form-interface.svg" alt="Creating a Payment via the Form Interface" >}}
