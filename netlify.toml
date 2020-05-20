@@ -39,6 +39,14 @@ HUGO_VERSION = "0.70.0"
 # For context-specific rules, use _headers or _redirects files, which are
 # PER-DEPLOY.
 [[redirects]]
+# Redirect default structure from old site
+from = "/en/*"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+# 404 page
 from = "/*"
 to = "/404.html"
 status = 404
