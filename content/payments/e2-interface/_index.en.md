@@ -3,6 +3,12 @@ title: "E2 Interface"
 draft: false
 ---
 
+This chapter describes how a web shop communicates with the payment gateway with E2 interface. When using the form interface, the payment data is created as a form on the web applications page. The consumer sends this form to the payment service. The payment is then completed in the web browser as an immediate result of the customer's actions.
+
+{{< figure src="/images/form-interface.svg" alt="Creating a Payment via the Form Interface" >}}
+
+### PHP Library
+
 We offer a PHP package for creating payments with the E2 interface easily. You can import the package to your project with **Composer** like so:
 
 ```sh
