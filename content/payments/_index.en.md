@@ -17,6 +17,7 @@ When using the [E2 interface][e2], the payment data is created as a form on the 
 
 Payment page bypass option for the E2 interface allows bypassing the Paytrail payment page and can be used to implement bank payment buttons directly in a web shop.
 
-The payment method page embedding can be used together to display the payment method selection directly in a web shop. Implementing the embedded payment method selection page is done by adding a short _JavaScript_ call to the page.
+The [payment method page embedding][embedding] can be used together to display the payment method selection directly in a web shop. Implementing the embedded payment method selection page is done by adding a short _JavaScript_ call to the page.
 
 [e2]: {{< ref "payments/e2-interface" >}}
+[embedding]: {{< ref "legacy/embedding" >}}
