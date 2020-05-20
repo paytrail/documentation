@@ -35,7 +35,7 @@ Content-Type: application/json
 ```js
 // A settlement object
 {
-    "id": "1234567",
+    "id": "123451234512345",
     "referenceNumber": "123456123456",
     // When the settlement was paid to merchant's bank account. Can be null if it's not yet paid.
     "settledAt": "2015-03-05",
@@ -77,7 +77,7 @@ Content-Type: application/json
             "paymentServiceProvider": "Paytrail",
             // Possible values: "collecting", "direct"
             "paymentServiceType": "collecting",
-            "settlementId": "1234567",
+            "settlementId": "123451234512345",
             "refunds": [
                 // refunds linked to payment
                 {
@@ -113,7 +113,7 @@ Content-Type: application/json
                 "transactionFee": -100
             },
             "currency": "EUR",
-            "settlementId": "1234567"
+            "settlementId": "123451234512345"
         }
     ],
 }

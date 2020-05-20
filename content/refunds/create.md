@@ -27,7 +27,7 @@ Required. List containing the refunded rows.
 #### `rows[].amount`
 **Type:** `Integer`
 
-Required. How much money to refund in cents (**1–2000000**) with VAT included. The payment must have this much money left to refund, and for the right VAT percent, in case E1 or E2 interface with product rows was used.
+Required. How much money to refund in cents (**1–49999999**) with VAT included. The payment must have this much money left to refund, and for the right VAT percent, in case E1 or E2 interface with product rows was used.
 
 #### `rows[].vatPercent`
 **Type:** `Integer`
