@@ -19,6 +19,8 @@ weight: 8
 
 **Paytrail Sales Channel** – A channel where multiple merchants can sell their products in one location (like an online marketplace or mall). This allows the customer to buy from several different merchants and make only one payment.
 
+**Paytrail Merchant API** – REST service for merchants where they can create and cancel refunds, opt to receive updates for any status changes of a refund and fetch settlement, payment and refund details.
+
 ### Settlements
 
 **Settlement** – The payment(s) made by the _Customer_ that Paytrail transfers to the _Merchant_ based on the settlement type selected. Settlements always have a _delay_.
