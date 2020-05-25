@@ -4,7 +4,7 @@ draft: false
 weight: 7
 ---
 
-The status of an unique payment can be checked with an HTML `<form>`.
+The status of an unique payment can be checked with an HTML form.
 
 Webshop developers can implement a button next to an order to allow checking of the status of the payment for any order directly from Paytrail's service. This way the merchant can be sure whether the payment was successfully completed in case the information has not reached the webshop otherwise. This kind of situation can occur for example when customer closes the browser before returning to the webshop and the payment cannot be confirmed as paid with payment status query services provided by the payment method provider.
 
@@ -22,6 +22,8 @@ Webshop developers can implement a button next to an order to allow checking of 
 ```
 
 ### Fields
+
+Required fields are marked with an asterisk **(*)**.
 
 #### `MERCHANT_ID (*)`
 **Type:** `Number[11]`
