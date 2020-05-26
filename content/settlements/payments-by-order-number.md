@@ -12,7 +12,10 @@ weight: 3
 GET /merchant/v1/payments?order_number=<order_number> HTTP/1.1
 ```
 
-Returns all matching payments in array of JSON objects.
+Returns all matching payments with limited details in array of JSON objects.
+To get more details about specific payment use ID value with [**payment details query**][payment-details].
+
+[payment-details]: {{< ref "settlements/payment-details" >}}
 
 ### Parameters
 
