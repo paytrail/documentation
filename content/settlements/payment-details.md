@@ -1,15 +1,15 @@
 ---
-title: "Payment Details"
+title: "Querying Payment Details"
 draft: false
-weight: 3
+weight: 4
 ---
 
 ### Route
 
-Merchant API payment details feature is not available for demo merchant (13466).
+{{< notice note >}}Merchant API payment details feature is not available for demo merchant (13466).{{< /notice >}}
 
 ```http
-GET /merchant/v1/payments/:id
+GET /merchant/v1/payments/:id HTTP/1.1
 ```
 
 Returns payment details.
@@ -21,7 +21,7 @@ Returns payment details.
 ### Request
 
 ```http
-GET /merchant/v1/payments/176456276153 HTTP/1.1
+GET /merchant/v1/payments/176456276154 HTTP/1.1
 Timestamp: 2012-12-31T12:00:00+0200
 Content-MD5: <base64 encoded 24 characters>
 Authorization: PaytrailMerchantAPI <merchant id>:<base64 encoded 44 characters>
