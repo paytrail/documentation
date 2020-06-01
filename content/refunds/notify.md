@@ -12,7 +12,11 @@ If an update is not acknowledged by the receiving end, the update to that refund
 
 ### Notification Flow
 
-![Refund Notification Flow](../refund_notify_call.svg)
+{{< figure src="/images/refund_notify_call.svg" alt="Refund Notification Flow" width="50%" >}}
+
+### Sequence Diagram
+
+{{< figure src="/images/refund_flow.svg" alt="Refund Flow Sequence Diagram" >}}
 
 ### Parameters
 

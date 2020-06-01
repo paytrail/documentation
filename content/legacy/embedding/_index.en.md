@@ -6,7 +6,7 @@ weight: 2
 
 When Paytrail payment service has been integrated using either the [REST interface][rest] or the [form interface][form], the payment process can be shortened and made easier from the customer's point of view by implementing payment method selection embedding. In this case the payment methods are available directly at the end of a webshop's order process instead of having to move first to Paytrail service to select the payment method.
 
-{{< figure src="widget-en.png" alt="Widget" title="Payment method selection page embedding" >}}
+{{< figure src="/images/embedding.png" alt="Payment method selection page embedding" width="75%" >}}
 
 The payment method selection page embedding is easy to implement once the payment service has been first integrated with REST or form interface. It can be enabled by adding a small JavaScript code to the payment button page. We recommend adding the code to the end of the page before the closing body tag. In this case JavaScript is run last without slowing down page rendering.
 

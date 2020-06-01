@@ -34,7 +34,7 @@ URL where customer is redirected after failed or cancelled payment. `PARAMS_OUT`
 Used to identify one transaction.
 
 #### `AMOUNT (*)`
-Price is given in euros and cents without currency. Decimals are separated with a dot. Must contain **two decimals**. Minimum price accepted by the service is **0.65 €**.
+Price is given in euros and cents without currency. Decimals are separated with a dot. Must contain **two decimals**. Interface accepts values between **0.65–499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
 
 #### `PARAMS_IN (*)`
 Comma separated list of fields used in `AUTHCODE` calculation. Only values listed in this field are shown in payment data.
@@ -47,6 +47,8 @@ Algorithm used in `AUTHCODE` calculation. Defaults to `1` (_SHA-256_).
 
 #### `AUTHCODE (*)`
 Calculated by joining all fields listed in `PARAMS_IN`. Fields are joined by placing the `|` (pipe) character between each two fields. `AUTHCODE` is formed from this string by calculating a sum using the algorithm from field `ALG`. This sum is converted to its 64-character hexadecimal form and lowercase letters are capitalized.
+
+See example of calculating the correct value [**here.**][authcode]
 
 #### `URL_NOTIFY`
 URL to be called when the payment has been marked as paid. This URL is called with parameters defined in `PARAMS_OUT_NOTIFY` when the payment is marked as paid. `PARAMS_OUT_NOTIFY` are added to `URL_CANCEL`.
@@ -62,13 +64,22 @@ Reference number to be delivered to payment method provider's service. Given val
 
 Reference number must comply against Finnish reference number standard or be Finnish reference number in international RF format (e.g. 1232 or RF111232). For Osuuspankki, Ålandsbanken and S-Pankki RF formatted reference numbers are converted to numeric Finnish reference number format.
 
+Single settlements are always made in the Finnish national reference standard. Paytrail does not create settlements using the RF reference standard.
+
 #### `PAYMENT_METHODS`
 Comma separated list of payment methods visible at payment method selection page. If only one is set the payment method page is bypassed and payer is directed to payment method provider page. Use requires agreement on use with Paytrail.
 
 #### `VAT_IS_INCLUDED`
-Whether VAT is included in prices given in `ITEM` records. Available values `1` (VAT is included, default), `0` (VAT is not included). This field is only used with `ITEM` records. If brought without, an error message is shown.
+Whether VAT is included in prices given in `ITEM` records. This field is only used with `ITEM` records. If brought without, an error message is shown.
 
-If using the Collector payment method, the value **must** be `1`. Collector will not be available if the value is `0`.
+Available values are:
+
+* `1` (VAT is included, default)
+* `0` (VAT is not included).
+
+If `VAT_IS_INCLUDED = 0`, payment service will calculate the sum to be charged from the customer based on the `ITEM_UNIT_PRICE`, `ITEM_VAT_PERCENT`, `ITEM_QUANTITY`, and `ITEM_DISCOUNT_PERCENT` values. This may lead to rounding differences between the web shop and the payment service. Please note that the calculation is done using two decimals.
+
+If using the _Collector_ payment method, the value must be `1`. Collector will not be available if the value is `0`.
 
 #### `MSG_SETTLEMENT_PAYER`
 Message to consumers bank statement or credit card bill if supported by payment method.
@@ -118,27 +129,34 @@ Payer's company.
 
 ### Product Information
 
-Order rows can be brought to Paytrail service using the following repetitive fields. First order item row is brought with index 0 (for example name of the first product in field `ITEM_TITLE[0]`). Payment total must be positive. Total sum of the product prices must be at least **0.65€**.
+Order rows can be brought to Paytrail service using the following repetitive fields. First order item row is brought with index 0 (for example name of the first product in field `ITEM_TITLE[0]`). Number of the order rows can not exceed **500**.
 
-#### `ITEM_TITLE[N]`
-Free field for product name. Required if product rows are included in data.
+Required fields when product rows are included in the data are `ITEM_TITLE`, `ITEM_UNIT_PRICE`, and `ITEM_VAT_PERCENT`. These are marked with an asterisk `(*)`.
+
+Total sum of the product prices must be between **0.65 – 499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
+
+#### `ITEM_TITLE[N] (*)`
+Free field for the product name.
 
 #### `ITEM_ID[N]`
-Product ID.
+Optional product ID containing numbers only.
 
 #### `ITEM_QUANTITY[N]`
-Quantity of products. If a decimal number such as `0.5` is used, the Collector payment method will be hidden. Default is `1`.
+Optional quantity of products. Default is `1`. If a decimal number such as `0.5` is used, the Collector payment method will be hidden.
 
-#### `ITEM_UNIT_PRICE[N]`
-The price for a single product with **up to two decimals**. Required if product rows are included in data.
+#### `ITEM_UNIT_PRICE[N] (*)`
+The price for a single product with **up to two decimals**.
 
-If `VAT_IS_INCLUDED = 0`, this is price not including VAT. Price may be negative value if discount is given.
+If `VAT_IS_INCLUDED = 0`, this is price excluding VAT. Price may be negative value if discount is given.
 
-#### `ITEM_VAT_PERCENT[N]`
-VAT percent used for product. Required if product rows are included in data.
+#### `ITEM_VAT_PERCENT[N] (*)`
+VAT percent used for product.
 
 #### `ITEM_DISCOUNT_PERCENT[N]`
-Item discount. Percent is a number between `0–100`. Default is `0`.
+Optional item discount. Percent is a number between `0–100`. Default is `0`.
 
 #### `ITEM_TYPE[N]`
-Type of the product. Available values `1` (normal, default), `2` (shipment cost) `3` (handling cost).
+Optional type of the product or its costs. Available values `1` (normal, default), `2` (shipment cost) `3` (handling cost).
+
+[authcode]: {{< ref "payments/e2-interface/authcode" >}}
+[requirements]: {{< ref "best-practices/requirements" >}}

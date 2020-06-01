@@ -26,7 +26,7 @@ When using the form interface the payment data is sent from a customer's browser
 
 When using the REST interface, the data that is sent to the payment service must always be UTF-8 encoded.
 
-{{< figure src="payment-json-en.png" title="Payment creation with the REST interface" alt="Payment creation with the REST interface" >}}
+{{< figure src="/images/rest-interface.svg" alt="Creating a Payment via the REST interface" >}}
 
 When using the REST service, always include the following headers:
 
