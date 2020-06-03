@@ -12,7 +12,7 @@ Refunds are created using order id as identifiers. Order id is obtained after re
 POST /merchant/v1/payments/:orderId/refunds HTTP/1.1
 ```
 
-If you don't have order id, you can use order number. Just note that if there's multiple orders with same order number, refund can't be made, even only one of them is paid. Merchants must use unique order numbers for Paytrail Merchant API to be able to link each refund to a single payment. Order id is always unique thus being preferred identifier.
+If you don't have order id, you can use order number. Just note that if there are multiple orders with the same order number, the refund can't be made, even only one of them is paid. Merchants must use unique order numbers for Paytrail Merchant API to be able to link each refund to a single payment. Order id is always unique thus being preferred identifier.
 
 
 ```http
