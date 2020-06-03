@@ -16,4 +16,4 @@ DELETE /merchant/v1/refunds/:refundToken
 
 - **HTTP 204:** Refund was cancelled successfully.
 - **HTTP 404:** Refund was not found with given token. Check that you gave a non-empty token that points to an existing refund.
-- **HTTP 405:** Refund cannot be cancelled from its current state. Check refund's status from Merchant's Panel.
+- **HTTP 405:** Refund cannot be cancelled from its current state. Check refund’s status from the Merchant Panel.
