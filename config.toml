@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://docs.paytrail.com/"
 languageCode = "en-us"
 title = "Paytrail Integration Guide"
 theme = "dot"
