@@ -4,10 +4,6 @@
 
 # Paytrail Integration Guide
 
-<!--TODO: Remove this disclaimer when site is live -->
-
-> **NOTE:** This repository is still work in progress and does not reflect the official Paytrail documentation linked below.
-
 [**Official Site**](https://docs.paytrail.com)
 
 This repository holds the source code for the Paytrail integration guide created with [**Hugo**][hugo] static site generator.
