@@ -47,6 +47,10 @@ link = "https://twitter.com/paytrail"
 icon = "ti-linkedin"
 link = "https://www.linkedin.com/company/paytrail-oyj/"
 
+[[params.social]]
+icon = "ti-github"
+link = "https://github.com/paytrail"
+
 [Languages.en]
 languageName = "en"
 languageCode = "en-us"
@@ -62,10 +66,10 @@ placeholder = "Searching something specific? Type it here."
 
 [Languages.en.params.cta]
 enable = true
-title = "Didn't find what you were looking for?"
-content = "Call our technical support number +358 20 718 1831 (weekdays 8–16 UTC +2/3), or email your questions at tech@paytrail.com"
+title = "Got something else on your mind?"
+content = "We want your contributions. Report an issue or open a pull request to us in GitHub."
 
 [Languages.en.params.cta.button]
 enable = true
-label = "Contact Us"
-link = "https://www.paytrail.com/en/customer-service"
+label = "Contribute"
+link = "https://github.com/paytrail/documentation"
