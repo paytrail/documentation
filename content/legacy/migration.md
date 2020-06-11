@@ -4,7 +4,7 @@ draft: false
 weight: 1
 ---
 
-Interface version E2 has replaced the previous versions E1 and S1. E2 is extensible which means that it can be used with or without product and delivery contact data. Interface version upgrade requires definition of fields used in payment creation and return call in fields `PARAMS_IN` and `PARAMS_OUT`. Interface version E2 also provides more data when returning from payment process to web shop.
+Interface version E2 has replaced the previous versions E1 and S1. E2 is extensible which means that it can be used with or without product and delivery contact data. Interface version upgrade requires definition of fields used in payment creation and return call in fields `PARAMS_IN` and `PARAMS_OUT`. Interface version E2 also provides more data when returning from payment process to website.
 
 ### Breaking Changes
 

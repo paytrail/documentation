@@ -5,6 +5,8 @@ weight: 2
 
 The S1 interface is functionally similar to the E1 interface but it has fewer fields to send.
 
+The payment gateway address is the same with E1: <https://payment.paytrail.com>
+
 ### Fields
 
 #### `MERCHANT_ID (*)`
