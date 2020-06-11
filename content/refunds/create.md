@@ -6,14 +6,17 @@ weight: 1
 
 ### Route
 
-Refunds are created using payment id as identifiers. Payment id is obtained after returned from payment and handling response from Paytrail. For example, in [E2 payments][E2] this is `PAYMENT_ID` field. The customer will be sent an email upon successful refund creation. Successful refund creation will return **HTTP status `202`** and refund location (link with a refund token). See section [General HTTP responses][responses].
+Refunds are created using payment id as identifier. Payment id is obtained after returned from payment and handling response from Paytrail. For example, in [E2 payments][E2] this is `PAYMENT_ID` field. The customer will be sent an email upon successful refund creation. Successful refund creation will return **HTTP status `202`** and refund location (link with a refund token). See section [General HTTP responses][responses].
 
 ```http
 POST /merchant/v1/payments/:paymentId/refunds HTTP/1.1
 ```
-When using payment id as identifier, message must include `Refund-Origin: internal` header.
+When using payment id as identifier, message must include header.
+```http
+Refund-Origin: internal
+```
 
-If you don't have payment id, you can use order number. Just note that if there are multiple orders with the same order number, the refund can't be made, even only one of them is paid. Merchants must use unique order numbers for Paytrail Merchant API to be able to link each refund to a single payment. Payment id is always unique thus being preferred identifier.
+If you don't have payment id, you can use order number. Please note that if there are multiple payments with the same order number, the refund can’t be created, even if only one of them is paid. Merchants must use unique order numbers for Paytrail Merchant API to be able to link each refund to a single payment. Payment id is always unique thus being preferred identifier.
 
 
 ```http
