@@ -3,6 +3,8 @@ title: Fields for the Interface
 weight: 2
 ---
 
+Payment gateway address is: <https://payment.paytrail.com>
+
 Supported character sets are **UTF-8** and **ISO-8859-1**. These character sets cannot be mixed.
 
 Required fields are marked with an asterisk **(*)**.
@@ -200,7 +202,7 @@ Type can be defined for each product row. Default type `1` means normal product 
 
 ### Calculating the `AUTHCODE`
 
-This example covers sending payment information in the most complete form. In this case, we are using the interface version E1. We recommend using Paytrail gateway in the way described here. This form is placed in the webshop by the payment method selection. The form shows the payment button currently in use and moves customer to payment service payment selection page when clicked. All fields are listed in this example, including optional unnecessary fields for better clarity. They can be removed from the form. Please note that in `AUTHCODE` calculation all fields, including optional parameters must always be used!
+This example shows how to send payment information in the most complete form using the interface version E1. We recommend using the Paytrail gateway as described here. This form is placed in the website by the payment method selection. The form shows the payment button currently in use and moves customer to payment service payment selection page when clicked. All fields are listed in this example, including optional unnecessary fields for better clarity. They can be removed from the form. Please note that in `AUTHCODE` calculation all fields, including optional parameters must always be used!
 
 ```html
 <form action="https://payment.paytrail.com/" method="post">

@@ -7,6 +7,11 @@ type: docs
 weight: 9
 ---
 
-We recommend using our **E2** interface for all payment service needs, but in case that is not an option we still support the **REST** interface.
+We recommend our [**E2**][e2] interface for all payment service needs, if that’s not an option we still support the [**REST**][rest] interface.
 
-**E1** and **S1** interfaces have been deprecated.
+[**E1**][e1] and [**S1**][s1] interfaces have been deprecated.
+
+[e2]: {{< ref "payments" >}}
+[rest]: {{< ref "legacy/rest-interface" >}}
+[e1]: {{< ref "legacy/e1-interface" >}}
+[s1]: {{< ref "legacy/s1-interface" >}}
