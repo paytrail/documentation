@@ -28,7 +28,7 @@ POST /merchant/v1/payments/:orderNumber/refunds HTTP/1.1
 #### `email`
 **Type:** `String`
 
-When specified, the given email will be used for the refund. Required if the payment was made through the S1 interface if payment is not paid using card (email is not required for card payments).
+When specified, the given email will be used for the refund. Required if the payment was made through the S1 interface if payment is not paid using card (email is not required for card payments). The email must be valid and formatted according to the **RFC 822** standard.
 
 #### `rows`
 **Type:** `Array[1, 500]`
@@ -81,6 +81,9 @@ An unknown key was encountered. Check that your refund rows don't contain any ex
 
 #### `missing-email (HTTP 400)`
 There was no email given for S1 payment refund request (email is mandatory for bank and Collector refunds). Add customer's email address to the refund request.
+
+#### `invalid-email (HTTP 400)`
+Email address is malformed. Check the email address.
 
 #### `invalid-interface (HTTP 400)`
 Payments with older simple interface version 1 or 3 can't be refunded. Use our newer payment interface so that you can create refunds in the future.
