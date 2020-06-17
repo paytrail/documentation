@@ -24,7 +24,7 @@ Order number is used to identify one transaction from another in the webshop sof
 
 Price is given in euros and cents. Price is given without currency type and decimals are separated with a dot. Price must contain two decimals.
 
-**Example:** `15.50`. Minimum price accepted by the service is **0.65 €**.
+**Example:** `15.50`. Minimum price accepted by the service is **0.01 €**.
 
 #### `REFERENCE_NUMBER`
 **Type**: `Number[50]`

@@ -183,7 +183,7 @@ Number of products. Usually the value is `1` (_required_). If using the Collecto
 #### `ITEM_PRICE[N] (*)`
 **Type**: `Float[10]`
 
-The price for a single product. If `INCLUDE_VAT = 0`, this is price not including VAT. If `INCLUDE_VAT = 1`, this price includes VAT. Price may be negative value if a discount is given. Payment total must be positive. Total sum of the product prices must be at least 0.65 €.
+The price for a single product. If `INCLUDE_VAT = 0`, this is price not including VAT. If `INCLUDE_VAT = 1`, this price includes VAT. Price may be negative value if a discount is given. Payment total must be positive. Total sum of the product prices must be at least 0.01 €.
 
 #### `ITEM_TAX[N] (*)`
 **Type**: `Float[10]`
