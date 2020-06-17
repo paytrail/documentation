@@ -24,7 +24,7 @@ Valid URL including http(s). URLs that do not include any dots (e.g. <http://loc
 `0-9, a-z, A-Z and ()[]{}*+-_,`. As regular expression `/^[0-9a-zA-Z()[]{}*+-_,.]{1,64}$/`. (64)
 
 #### `AMOUNT`
-Float between `0.65–499999.99` (10)
+Float between `0.01 – 499999.99` (10)
 
 #### `PARAMS_IN`
 `0-9, A-Z, [],_`. (4096)

@@ -34,7 +34,7 @@ URL where customer is redirected after failed or cancelled payment. `PARAMS_OUT`
 Used to identify one transaction.
 
 #### `AMOUNT (*)`
-Price is given in euros and cents without currency. Decimals are separated with a dot. Must contain **two decimals**. Interface accepts values between **0.65–499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
+Price is given in euros and cents without currency. Decimals are separated with a dot. Must contain **two decimals**. Interface accepts values between **0.01 – 499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
 
 #### `PARAMS_IN (*)`
 Comma separated list of fields used in `AUTHCODE` calculation. Only values listed in this field are shown in payment data.
@@ -133,7 +133,7 @@ Order rows can be brought to Paytrail service using the following repetitive fie
 
 Required fields when product rows are included in the data are `ITEM_TITLE`, `ITEM_UNIT_PRICE`, and `ITEM_VAT_PERCENT`. These are marked with an asterisk `(*)`.
 
-Total sum of the product prices must be between **0.65 – 499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
+Total sum of the product prices must be between **0.01 – 499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
 
 #### `ITEM_TITLE[N] (*)`
 Free field for the product name.
