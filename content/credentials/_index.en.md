@@ -82,4 +82,4 @@ The amount ranges `0.01` to `0.99` and `1.01` to `4.99` will always make the cre
 - **Password:** Bank's web site will provide these for you.
 - **Security code:** Bank's web site will provide these for you.
 
-Remember that Paytrail also sets a minimum limit for payment amount that is **0,65 €**.
+Remember that Paytrail also sets a minimum limit for payment amount that is **0.01 €**.
