@@ -1,14 +1,16 @@
 ---
-title: "Rest Interface"
+title: "Rest Interface (Beta)"
 draft: false
 weight: 5
 ---
 
 ### Description
 
-Paytrail payment REST interface can be used to create a payment with a server-to-server request and thus limits usage less than the form interface. With the REST interface, the payment is created in advance by sending payment data as an _XML_ or _JSON_ message over _HTTPS_. Service returns the response message in the corresponding format.
+{{< notice warning >}}
+REST interface has been deprecated and doesn't support advanced features like payment page bypass. We recommend using E2 form interface instead.
+{{< /notice >}}
 
-{{% notice warning %}}REST interface does not support payment page bypass.{{% /notice %}}
+Paytrail payment REST interface can be used to create a payment with a server-to-server request and thus limits usage less than the form interface. With the REST interface, the payment is created in advance by sending payment data as an _XML_ or _JSON_ message over _HTTPS_. Service returns the response message in the corresponding format.
 
 We offer a PHP package for creating payments with the REST interface easily. You can import the package to your project with **Composer** like so:
 
@@ -21,6 +23,10 @@ The package requires **PHP 7.2** or newer. The detailed documentation is availab
 If you encounter any problems using the package don't hesitate reporting them to us in GitHub. You can also participate in the package development by submitting us pull requests.
 
 ### Usage
+
+{{< notice note >}}
+Even though REST interface is marked as beta, it is considered a stable product. Paytrail will not implement backwards incompatible or otherwise breaking changes to it without prior notice.
+{{< /notice >}}
 
 When using the form interface the payment data is sent from a customer's browser to Paytrail service, but when using the REST interface customer's server sends the payment data to Paytrail service in _XML_ or _JSON_ format. The response message is returned in the same format.
 

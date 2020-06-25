@@ -1,6 +1,7 @@
 ---
 title: "Error Handling"
 draft: false
+weight: 2
 ---
 
 If the sent request is incorrect or there is an error in the interface usage, the interface returns an error message. The error message is in _XML_ or _JSON_ format depending on the request data type (`Content-Type` header). If the data type is incorrect or it was not read, the error message is returned in XML format. Return message for an incorrect request is returned with HTTP error code 400.

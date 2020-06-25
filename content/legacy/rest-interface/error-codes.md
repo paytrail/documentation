@@ -1,6 +1,7 @@
 ---
 title: "Error Codes"
 draft: false
+weight: 3
 ---
 
 The following fields are the error codes returned during an unsuccessful payment creation.
