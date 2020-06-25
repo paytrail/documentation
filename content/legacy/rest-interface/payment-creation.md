@@ -1,6 +1,7 @@
 ---
 title: "Payment Creation"
 draft: false
+weight: 1
 ---
 
 Paytrail payment service REST interface allows for creating a payment in advance with a simple HTTP POST request, which sends the payment data as an _XML_ or _JSON_ message. The request returns an order number, payment ID (_token_) and URL address for making a payment. In a typical case, a webshop creates a payment with the REST interface at the end of an order process, and redirects the customer to the returned URL.
