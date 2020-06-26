@@ -86,7 +86,7 @@ The following YAML keys are supported.
 - `icon` – a valid [Themify][themify] icon code shown in the main page
 - `draft` – value `true` ensures the page is not visible in the production build (for convenience, the page is visible when developing locally and in pull request preview deployments)
 - `type` – when set to `docs` the page is displayed on the main page as a box with title, icon, and description
-- `weight` – defines the ordering of pages in the page tree, lower weight ranks the page higher
+- `weight` – defines the order of pages in the page tree, lower weight ranks the page higher
 
 ### Formatting
 
