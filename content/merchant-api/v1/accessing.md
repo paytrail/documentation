@@ -46,7 +46,7 @@ In case of `GET` and `POST` requests there is no content in message and `$conten
 - **Merchant Secret:** `6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ`
 - **Timestamp:** `2020-05-01T12:00:00+0300`
 - **Order Number:**	`102402728626`
-- **URL:** `https://api.paytrail.com/merchant/v1/payments/102402728626/refunds`
+- **URL:** `/merchant/v1/payments/102402728626/refunds`
 - **Method:** `POST`
 - **Content MD5:** `nYDNvmvsxI4ZxJL8OghRTw==` 
 - **Content:**
