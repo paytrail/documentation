@@ -2,6 +2,21 @@
 
 This changelog references **merged pull requests** only. Click on the pull request titles below to see the exact changes made.
 
+## 6.1 (June 2020)
+
+### New
+
+- [#59 Change Recommended Refund Identifier to be Payment ID over Order Number](https://github.com/paytrail/documentation/pull/59)
+- [#62 Change the Call-to-Action button to GitHub endorsement](https://github.com/paytrail/documentation/pull/62)
+- [#65 Polish E1 and S1 interface pages](https://github.com/paytrail/documentation/pull/65)
+- [#68 Improve email validation description on refund creation](https://github.com/paytrail/documentation/pull/68)
+- [#71 Improve the contribution guide](https://github.com/paytrail/documentation/pull/71)
+
+### Fixed
+
+- [#73 Revert REST interface documentation to beta phase](https://github.com/paytrail/documentation/pull/73)
+- [#76 Use correct URL in Merchant API signature calculation](https://github.com/paytrail/documentation/pull/76)
+
 ## 6.0
 
 This is a major change due to porting the documentation codebase to _Hugo_ static site generator and making the project open-source for easier contributing.
