@@ -147,6 +147,8 @@ Optional quantity of products. Default is `1`. If a decimal number such as `0.5`
 #### `ITEM_UNIT_PRICE[N] (*)`
 The price for a single product with **up to two decimals**.
 
+Value can be negative for individual products, but whole order total amount must be positive value.
+
 If `VAT_IS_INCLUDED = 0`, this is price excluding VAT. Price may be negative value if discount is given.
 
 #### `ITEM_VAT_PERCENT[N] (*)`
