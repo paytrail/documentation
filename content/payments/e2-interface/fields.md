@@ -132,6 +132,7 @@ Payer's company.
 Order rows can be brought to Paytrail service using the following repetitive fields. First order item row is brought with index 0 (for example name of the first product in field `ITEM_TITLE[0]`). Number of the order rows can not exceed **500**.
 
 Required fields when product rows are included in the data are `ITEM_TITLE`, `ITEM_UNIT_PRICE`, and `ITEM_VAT_PERCENT`. These are marked with an asterisk `(*)`.
+All items should be consistent. If one item has `ITEM_ID`, every item should have it.
 
 Total sum of the product prices must be between **0.65 – 499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
 
