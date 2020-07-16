@@ -105,7 +105,7 @@ Unicode alphabets and `()[]{}*+-_,:&!?@#$£=*;~/\"'`. See regular expression fro
 Floating point number. (10)
 
 #### `ITEM_UNIT_PRICE`
-Floating point number. between `0–499 999.99`. (10)
+Floating point number. between `–499 999.99 – 499 999.99`. (10)
 
 #### `ITEM_VAT_PERCENT`
 Floating point number. between `0-100`. (10)

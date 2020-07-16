@@ -43,7 +43,9 @@ Required. How much money to refund in cents (**1–49999999**) with VAT included
 #### `rows[].vatPercent`
 **Type:** `Integer`
 
-Required. Which VAT percent to allocate the refund to, expressed in fractions of a hundred (**0–10000**).
+Required/Not allowed. Which VAT percent to allocate the refund to, expressed in fractions of a hundred (**0–10000**).
+
+Required if product information was used in original order. Not allowed if order was placed with amount instead of product information.
 
 #### `rows[].description`
 **Type:** `String`
