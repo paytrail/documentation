@@ -56,7 +56,7 @@ Content-Type: application/json
             // Payer name, only available for bank payments
             "payerName": "John Doe",
             "amounts": {
-                // Amount provided in payment data from web shop
+                // Amount provided in payment data from website
                 "original": 10000,
                 // Charged amount
                 "charged": 10000,

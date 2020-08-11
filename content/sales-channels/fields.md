@@ -55,7 +55,7 @@ Culture affects the default language of Paytrail’s payment service page as wel
 #### `PRESELECTED_METHOD`
 **Type:** `Number[2]`
 
-If the payment method selection is done in the web shop, the payment method is delivered in this field. Paytrail's service can be bypassed when preselected payment method is delivered. Use requires an additional agreement with Paytrail.
+If the payment method selection is done in the website, the payment method is delivered in this field. Paytrail's service can be bypassed when preselected payment method is delivered. Use requires an additional agreement with Paytrail.
 
 See [**payment method IDs**][payment-method-ids] for all the values. 
 
@@ -119,7 +119,7 @@ Contact address' country. The value follows the _ISO-3166-1_ standard and it con
 #### `INCLUDE_VAT (*)`
 **Type:** `0 | 1`
 
-Signals whether the prices in item rows include VAT or not. Value `1` means that VAT is included in given prices, value `0` means that given VAT has to be added to price. If your products are saved including VAT in your web shop, use value `1`. If products are saved without VAT, use value `0`.
+Signals whether the prices in item rows include VAT or not. Value `1` means that VAT is included in given prices, value `0` means that given VAT has to be added to price. If your products are saved including VAT in your website, use value `1`. If products are saved without VAT, use value `0`.
 
 #### `ITEMS (*)`
 **Type:** `Number[8]`

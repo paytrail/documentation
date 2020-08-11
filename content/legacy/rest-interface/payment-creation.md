@@ -45,7 +45,7 @@ Localization defines default language for the payment method selection page and 
 Either `orderDetails` or payment sum price has to be specified. `orderDetails` record contains payer details and detailed order rows. We recommend using the `orderDetails` record whenever it is possible. If the `orderDetails` record is not supplied, invoice and instalment payment methods are not available and payer and order row details are not available in the Merchant's Panel. Payment method fees can only be used when the orderDetails record is used. Without orderDetails record the order details cannot be shown on the payment method selection page.
 
   - `includeVat` (0/1, required) \
-  VAT included field shows if the product row prices include value added tax. Value `1` means that VAT is included in the shown price, and `0` that it will be added. Therefore, use `1`, if the prices in your webshop include value added tax and `0` if the prices do not include value added tax. If Collector payment method is used, then the value should be `1`, or the payment method is hidden from the payment method selection page.
+  VAT included field shows if the product row prices include value added tax. Value `1` means that VAT is included in the shown price, and `0` that it will be added. Therefore, use `1`, if the prices in your website include value added tax and `0` if the prices do not include value added tax. If Collector payment method is used, then the value should be `1`, or the payment method is hidden from the payment method selection page.
 
   - `contact` (required)
 

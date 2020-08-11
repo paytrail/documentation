@@ -33,7 +33,7 @@ Merchant ID is sent to the merchant after registration.
 #### `ORDER_NUMBER (*)`
 **Type:** `String[50]`
 
-This is the same order number that was generated in the webshop and sent to the Payment Gateway.
+This is the same order number that was generated in the website and sent to the Payment Gateway.
 
 #### `AUTHCODE (*)`
 **Type:** `String[32]`

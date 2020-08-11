@@ -1,6 +1,6 @@
 ---
 title: "Best Practices"
-description: "Don't know where to begin? Follow our guide for integrating Paytrail to your shop seamlessly."
+description: "Don't know where to begin? Follow our guide for integrating Paytrail to your system seamlessly."
 icon: "ti-wand"
 draft: false
 type: docs
@@ -20,7 +20,7 @@ This guide is also available in Finnish as a [**presentation**](https://app.seid
 * use aggregate settlements and handle refunds through Paytrail
 * use payment page bypass to improve merchant's payment conversion
 * send extended information about the consumer to Paytrail to enable using all the payment methods
-* use our [**Merchant API**][merchant-api] for creating refunds directly from the web shop management portal and modifying the settlement materials to satisfy your financial systems
+* use our [**Merchant API**][merchant-api] for creating refunds directly from the website management portal and modifying the settlement materials to satisfy your financial systems
 
 ### Choosing the Right Interface
 
@@ -32,7 +32,7 @@ We recommend the [**E2 interface**][e2]  for payments due to its security and be
 
 * `ORDER_NUMBER` required for targeting payments
 * `PARAMS_IN` required for defining the data passed into Paytrail systems
-* `PARAMS_OUT` required for defining the data passed in return to the web shop
+* `PARAMS_OUT` required for defining the data passed in return to the website
 
 **We also recommend the following optional fields**
 
@@ -62,7 +62,7 @@ Passing the `URL_NOTIFY` field allows you to receive a confirmation when the ref
 
 Daily settlements delivered via the [**Merchant API**][settlements] contain payments and refunds as single rows. You can search the settlements through REST endpoints in JSON format. The settlement data contains payments, refunds, and transaction fees.
 
-You can also use the **Merchant API** for bookkeeping. The payment is created in Paytrail so that we use the invoice number as the order number (`ORDER_NUMBER`). Settlement data is fetched from the Merchant API and modified to match the settlement material provided by the bank (`ORDER_NUMBER` = reference number from the bank). You may then pass the amended bank materials into the financial software. The settlement with the reference is booked into another account and excluded from the bookkeeping.
+You can also use the **Merchant API** for bookkeeping. The payment is created in Paytrail so that we use the invoice number as the order number (`ORDER_NUMBER`). Settlement data is retreiveed from the Merchant API and modified to match the settlement material provided by the bank (`ORDER_NUMBER` = reference number from the bank). You may then pass the amended bank materials into the financial software. The settlement with the reference is booked into another account and excluded from the bookkeeping.
 
 For example, the following HTTP request returns settlement IDs from the given period.
 

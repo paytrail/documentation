@@ -14,7 +14,7 @@ Values may not contain "|" characters (pipe, vertical bar). These values must be
 {{< /notice >}}
 
 {{< notice "note" >}}
-It is not recommended to use REFERENCE_NUMBER field unless there is a justifiable requirement for it. Field allows to pass a webshop generated reference number for reference payment through Paytrail service. Field value is only used with payment methods which are used with merchant's own contracts using only technical implementation from Paytrail. With other payment methods (or when REFERENCE_NUMBER is omitted) Paytrail always generates reference number automatically.
+It is not recommended to use REFERENCE_NUMBER field unless there is a justifiable requirement for it. Field allows to pass a website generated reference number for reference payment through Paytrail service. Field value is only used with payment methods which are used with merchant's own contracts using only technical implementation from Paytrail. With other payment methods (or when REFERENCE_NUMBER is omitted) Paytrail always generates reference number automatically.
 {{< /notice >}}
 
 ### Fields
@@ -29,7 +29,7 @@ Merchant ID is the merchant identification number given by Paytrail. Merchant ID
 #### `ORDER_NUMBER (*)`
 **Type:** `String[64]`
 
-Order number is used to identify one transaction from another in the webshop software.
+Order number is used to identify one transaction from another in the website software.
 
 #### `REFERENCE_NUMBER`
 **Type:** `Number[50]`
@@ -79,7 +79,7 @@ Culture affects the default language and how amounts are shown on payment method
 #### `PRESELECTED_METHOD`
 **Type:** `Number[2]`
 
-If payment method selection is done in the webshop, payment method is delivered in this field. Check the available payment methods from [**this**][methods] page.
+If payment method selection is done in the website, payment method is delivered in this field. Check the available payment methods from [**this**][methods] page.
 
 #### `MODE`
 **Type:** `Number[1]`
@@ -154,7 +154,7 @@ Payer home country. Data is given using **ISO-3166-1** standard values. For exam
 #### `INCLUDE_VAT`
 **Type:** `Number[1]`
 
-Whether VAT is included in prices given in `ITEM` records. Value `1` indicates that VAT is included in given price. Value `0` indicates that price does not include VAT. Use the webshop native value to avoid rounding errors. That means, if product prices are saved without VAT in the webshop software, use `0` and if prices are saved with VAT, use `1`. If using the Collector payment method, the value **must** be `1`. Collector will not be available if the value is `0`.
+Whether VAT is included in prices given in `ITEM` records. Value `1` indicates that VAT is included in given price. Value `0` indicates that price does not include VAT. Use the website native value to avoid rounding errors. That means, if product prices are saved without VAT in the website software, use `0` and if prices are saved with VAT, use `1`. If using the Collector payment method, the value **must** be `1`. Collector will not be available if the value is `0`.
 
 #### `ITEMS (*)`
 **Type:** `Number[3]`

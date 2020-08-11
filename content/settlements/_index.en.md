@@ -1,6 +1,6 @@
 ---
 title: "Settlements"
-description: "Fetch payment data or settlement data via the API."
+description: "retreive payment data or settlement data via the API."
 icon: "ti-money"
 draft: false
 type: docs

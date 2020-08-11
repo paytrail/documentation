@@ -29,7 +29,7 @@ ISO 3 letter symbol for settlement currency e.g. "EUR"
   - `amounts` \
   Payment amounts object
     - `original` number [50000000] \
-    Amount provided in payment data from web shop
+    Amount provided in payment data from website
     - `charged`	number [50000000] \
     Charged amount
     - `settled`	number [50000000] \

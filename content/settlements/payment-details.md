@@ -86,5 +86,5 @@ Content-Type: application/json
 
 ### Resource Specific Error Messages
 
-- `invalid-consumer-payment-id` (**Code:** `404`) Invalid consumer payment ID. Check the consumer payment ID. You can check the value from Merchant's Panel.
+- `invalid-consumer-payment-id` (**Code:** `404`) Invalid consumer payment ID. Check the consumer payment ID. You can check the value from Merchant Panel.
 
