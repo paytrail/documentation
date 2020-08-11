@@ -46,7 +46,7 @@ We recommend the [**E2 interface**][e2]  for payments due to its security and be
 
 #### Use Payment Page Bypass
 
-We encourage you to use the payment page bypass to remove an additional step from the payment process. Usually, our payment service redirects the consumer to the payment page for selecting a payment method. 
+We encourage you to use the payment page bypass to remove an additional step from the payment process. Usually, our payment service redirects the consumer to the payment page for selecting a payment method.
 
 Using the bypass allows the merchant to display the payment methods on their website aligning the purchasing process with the merchant’s brand and improving the conversion.
 
