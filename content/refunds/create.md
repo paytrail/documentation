@@ -15,7 +15,6 @@ When using payment id as identifier, message must include header.
 ```http
 Refund-Origin: internal
 ```
-When using payment id as identifier, message must include `Refund-Origin: internal` header.
 
 If you don't have payment id, you can use order number. Please note that if there are multiple payments with the same order number, the refund can’t be created, even if only one of them is paid. Merchants must use unique order numbers for Paytrail Merchant API to be able to link each refund to a single payment. Payment id is always unique thus being preferred identifier.
 
