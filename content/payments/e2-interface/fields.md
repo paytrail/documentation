@@ -6,7 +6,7 @@ weight: 1
 
 ### Fields
 
-Following form describes fields to be sent to payment gateway.
+The following fields can be sent to payment gateway.
 
 Payment gateway address is: <https://payment.paytrail.com/e2>
 
@@ -77,7 +77,7 @@ Available values are:
 * `1` (VAT is included, default)
 * `0` (VAT is not included).
 
-If `VAT_IS_INCLUDED = 0`, payment service will calculate the sum to be charged from the customer based on the `ITEM_UNIT_PRICE`, `ITEM_VAT_PERCENT`, `ITEM_QUANTITY`, and `ITEM_DISCOUNT_PERCENT` values. This may lead to rounding differences between the web shop and the payment service. Please note that the calculation is done using two decimals.
+If `VAT_IS_INCLUDED = 0`, payment service will calculate the sum to be charged from the customer based on the `ITEM_UNIT_PRICE`, `ITEM_VAT_PERCENT`, `ITEM_QUANTITY`, and `ITEM_DISCOUNT_PERCENT` values. This may lead to rounding differences between the website and the payment service. Please note that the calculation is done using two decimals.
 
 If using the _Collector_ payment method, the value must be `1`. Collector will not be available if the value is `0`.
 
@@ -91,7 +91,7 @@ Message to consumers bank statement or credit card bill if supported by payment 
 Message shown in payment method provider page. Currently this is supported by Osuuspankki, Visa (Nets), MasterCard (Nets), American Express (Nets) and Diners Club (Nets). Not all payment methods support showing the message.
 
 #### `MSG_UI_MERCHANT_PANEL`
-Message shown in Paytrail Merchant's Panel.
+Message shown in Paytrail Merchant Panel.
 
 #### `EXPIRATION_FOR_PAYMENT_CREATION`
 Sets time when payment possibility is going to be expired for consumer. Payment can't be done if consumer enters to payment page after given expiration time. Time is validated when entering payment page and payment is created. Expired time will cause payment not to be created and not to be shown in merchant portal. Consumer will get error message if payment was expired. This does not disallow consumer from staying on payment page or being redirected to payment methods or completing payments after being able to get to payment page. Default is ISO-8601 notation datetime with time zone (yyyy-mm-ddThh:mm:ss+-hh:mm).

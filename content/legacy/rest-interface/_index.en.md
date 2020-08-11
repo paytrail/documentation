@@ -10,7 +10,7 @@ weight: 5
 REST interface has been deprecated and doesn't support advanced features like payment page bypass. We recommend using E2 form interface instead.
 {{< /notice >}}
 
-Paytrail payment REST interface can be used to create a payment with a server-to-server request and thus limits usage less than the form interface. With the REST interface, the payment is created in advance by sending payment data as an _XML_ or _JSON_ message over _HTTPS_. Service returns the response message in the corresponding format.
+Paytrail REST interface can be used to create a payment with a server-to-server request and thus limits usage compared to the form interface. With the REST interface, the payment is created in advance by sending payment data as an _XML_ or _JSON_ message over _HTTPS_. Service returns the response message in the corresponding format.
 
 We offer a PHP package for creating payments with the REST interface easily. You can import the package to your project with **Composer** like so:
 
@@ -20,7 +20,7 @@ composer require paytrail/rest-module
 
 The package requires **PHP 7.2** or newer. The detailed documentation is available on [**GitHub**][rest-gh] and [**Packagist**][rest-packagist].
 
-If you encounter any problems using the package don't hesitate reporting them to us in GitHub. You can also participate in the package development by submitting us pull requests.
+If you encounter any problems using the package, please report them to us in GitHub. You can also participate in the package development by submitting us pull requests.
 
 ### Usage
 
@@ -44,7 +44,7 @@ Sent message type. The message can be sent either in XML or JSON format. Corresp
 
 Interface version. The current REST interface version is `1`. Each request sent to the interface must be verified with Basic authentication (Authorization header). Basic authentication sends the Merchant ID as a username and the Merchant secret as a password.
 
-### Receiving the Payment Receipt
+### Receiving a Payment Receipt
 
 Payment receipt handling has been documented [**here**][receipt].
 

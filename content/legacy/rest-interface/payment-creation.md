@@ -4,7 +4,7 @@ draft: false
 weight: 1
 ---
 
-Paytrail payment service REST interface allows for creating a payment in advance with a simple HTTP POST request, which sends the payment data as an _XML_ or _JSON_ message. The request returns an order number, payment ID (_token_) and URL address for making a payment. In a typical case, a webshop creates a payment with the REST interface at the end of an order process, and redirects the customer to the returned URL.
+Paytrail payment service REST interface allows for creating a payment in advance with a simple HTTP POST request, which sends the payment data as an _XML_ or _JSON_ message. The request returns an order number, payment ID (_token_) and URL address for making a payment. In a typical case, a website creates a payment with the REST interface at the end of an order process, and redirects the customer to the returned URL.
 
 ### Service URL
 
@@ -21,13 +21,13 @@ Order number. Order number is a string of characters identifying the customer's 
 Reference number to be sent to payment method provider's service. Given value is used only if user selected payment method is configured as interface (i.e. own direct agreement with payment method provider), otherwise the reference number is generated automatically by Paytrail.
 
 - `description` (all characters[65 000], optional) \
-Any data about the order in text format can be sent to the payment system. The most usual pieces of data are customer name and contact information and order product information. They are shown in the Merchant's Panel in payment details.
+Any data about the order in text format can be sent to the payment system. The most usual pieces of data are customer name and contact information and order product information. They are shown in the Merchant Panel in payment details.
 
 - `currency` (upper case[3], required) \
 Payment currency. Value must be EUR for Finnish banks, otherwise the payment will not be accepted.
 
 - `locale` (all characters[5], optional) \
-Localisation defines default language for the payment method selection page and presentation format for the sums. Available localisations are `fi_FI` , `sv_SE` and `en_US`. The default localisation is `fi_FI`.
+Localization defines default language for the payment method selection page and presentation format for the amounts. Available localizations are `fi_FI` , `sv_SE` and `en_US`. The default localization is `fi_FI`.
 
 - `price` (decimal number[10], optional) \
   Payment total. Send either exact payment data (`orderDetails`) or the payment total to the service. If you send only the payment total price, (_Klarna_ and _Collector_) invoice and instalment payment methods are not available and order details cannot be shown in the Merchant's Panel. We recommend using `orderDetails` record whenever it is possible. The value of price must be greater or equal than `0.65`.
@@ -74,7 +74,7 @@ Either `orderDetails` or payment sum price has to be specified. `orderDetails` r
   - `products` (required)
     - `product` (recurring element [1,500])
       - `title` (all characters[255], required) \
-        Product name in free format. The product title is shown in the Merchant's Panel and on Klarna service invoices on a product row. Product details are shown also on the payment method selection page.
+        Product name in free format. The product title is shown in the Merchant Panel and on Klarna service invoices on a product row.
       - `code` (all characters[16], optional) \
         Optional product number.
       - `amount` (decimal number[10], required) \
@@ -232,7 +232,7 @@ The service responds to request in the same format (_XML_ or _JSON_) as it was r
 
 **Example: Payment creation with the REST interface – XML request (light version)**
 
-{{% notice note %}}This example describes the interface usage without orderDetails. Please note that the orderDetails record is recommended whenever it is possible. Without the orderDetails record, payment subscriber details and specified product rows cannot be shown in the Merchant's Panel and invoice and instalment payment methods are not supported. In addition, payment method fees are available only when using the orderDetails record.{{% /notice %}}
+{{% notice note %}}This example shows the interface without orderDetails. Please note that the orderDetails record is recommended whenever possible. Without the orderDetails record, payer details and specified product rows cannot be shown in the Merchant Panel and invoice and instalment payment methods are not supported. In addition, payment method fees are available only when using the orderDetails record.{{% /notice %}}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

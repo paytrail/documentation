@@ -1,6 +1,6 @@
 ---
 title: "Terminology"
-description: "Don't get it? Don't sweat it. Read the definitions from our glossary."
+description: "Don't get it? Don't sweat it. Check out the definitions from our glossary."
 icon: "ti-book"
 draft: false
 type: docs

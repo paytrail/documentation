@@ -60,7 +60,7 @@ copyright = "The content is licensed under the open-source MIT license."
 
 [Languages.en.params.banner]
 title = "Paytrail Integration Guide"
-subtitle = "Find out how to integrate your business with our payment service."
+subtitle = "Find out how to integrate our payment service."
 bg_image = "images/paytrail.jpg"
 placeholder = "Searching something specific? Type it here."
 

@@ -1,10 +1,10 @@
 ---
-title: "Examples of Payment Method Banners"
+title: "Payment Method Banners Examples"
 draft: false
 weight: 3
 ---
 
-In this page you can find examples how to implement the banner for your shop. We provide a preview image and a hyperlink for fetching the image.
+Here are some examples of how to implement the banner on a website. There's a preview image and a hyperlink for retrieving the image.
 
 ***
 

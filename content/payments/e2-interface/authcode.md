@@ -1,5 +1,5 @@
 ---
-title: Calculating the AUTHCODE for E2 Payment
+title: Calculating AUTHCODE for E2 Payment
 draft: false
 weight: 3
 ---

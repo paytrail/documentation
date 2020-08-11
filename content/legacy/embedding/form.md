@@ -15,7 +15,7 @@ The form element ID value data is sent to the payment service. The form element 
 - `options: object` \
 Options is a data structure, which allows adding extra parameters for the design and functionality of the payment method selection page widget. The parameters are described in parameters.
 
-**Example: Payment method selection page embedding with form interface**
+**Example: Embedding the payment method selection page with the form interface**
 
 ```html
 <form id="payment">
