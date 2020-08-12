@@ -7,7 +7,7 @@ type: docs
 weight: 3
 ---
 
-This selection introduces payment method specific settings. Field `PAYMENT_METHODS` (only available in the [E2 interface][e2])) for selecting and hiding methods and a list of special payment method specific restrictions can be found [here][payment-methods].
+This section introduces payment method specific settings. Field `PAYMENT_METHODS` (only available in the [E2 interface][e2]) for selecting and hiding methods and a list of special payment method specific restrictions can be found [here][payment-methods].
 
 It is possible to bypass the Paytrail payment method selection page and implement the payment method selection directly to the checkout page on the website by providing a single payment method value in the `PAYMENT_METHODS` field. The customer is then directed from the website to the payment method they selected.
 
@@ -18,4 +18,4 @@ Payment page bypass is a premium feature (contact our customer service team for 
 
 [e2]: {{< ref "payments/e2-interface/fields" >}}
 
-[payment-methods]: {[< ref "payment-methods/values/" >]}
+[payment-methods]: {{< ref "values" >}}
