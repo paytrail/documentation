@@ -62,7 +62,7 @@ Passing the `URL_NOTIFY` field allows you to receive a confirmation when the ref
 
 Daily settlements delivered via the [**Merchant API**][settlements] contain payments and refunds as single rows. You can search the settlements through REST endpoints in JSON format. The settlement data contains payments, refunds, and transaction fees.
 
-You can also use the **Merchant API** for bookkeeping. The payment is created in Paytrail so that we use the invoice number as the order number (`ORDER_NUMBER`). Settlement data is retreiveed from the Merchant API and modified to match the settlement material provided by the bank (`ORDER_NUMBER` = reference number from the bank). You may then pass the amended bank materials into the financial software. The settlement with the reference is booked into another account and excluded from the bookkeeping.
+You can also use the **Merchant API** for bookkeeping. The payment is created in Paytrail so that we use the invoice number as the order number (`ORDER_NUMBER`). Settlement data is retrieved from the Merchant API and modified to match the settlement material provided by the bank (`ORDER_NUMBER` = reference number from the bank). You may then pass the amended bank materials into the financial software. The settlement with the reference is booked into another account and excluded from the bookkeeping.
 
 For example, the following HTTP request returns settlement IDs from the given period.
 
