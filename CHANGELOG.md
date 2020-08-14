@@ -26,7 +26,7 @@ This is a major change due to porting the documentation codebase to _Hugo_ stati
 - [#5 User Interface and Content Enhancements](https://github.com/paytrail/documentation/pull/5)
 - [#14 Add section about paytrail/module to REST documentation](https://github.com/paytrail/documentation/pull/14)
 - [#16 Add working PHP example to Merchant API authentication](https://github.com/paytrail/documentation/pull/16)
-- [#39 Documentation about how to fetch payments by order number via Merchant API](https://github.com/paytrail/documentation/pull/39)
+- [#39 Documentation about how to retrieve payments by order number via Merchant API](https://github.com/paytrail/documentation/pull/39)
 - [#48 Add settlement details and structure page](https://github.com/paytrail/documentation/pull/48)
 - [#49 Add an introduction text for the payments index page with screenshots](https://github.com/paytrail/documentation/pull/49)
 

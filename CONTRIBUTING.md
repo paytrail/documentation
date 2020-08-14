@@ -17,7 +17,7 @@
 
 To build the project locally, you either need **Hugo** or **Docker** to be installed. In this section, we document the Docker usage. If necessary, read the official [Hugo documentation][hugodocs] for getting started without Docker.
 
-Fork and clone the project from GitHub. Current theme is included in the project as a sub-module which must be fetched as well.
+Fork and clone the project from GitHub. Current theme is included in the project as a sub-module which must be retrieved as well.
 
 ```sh
 # Replace the <USERNAME> with your GitHub account name after forking.

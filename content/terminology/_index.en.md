@@ -1,6 +1,6 @@
 ---
 title: "Terminology"
-description: "Don't get it? Don't sweat it. Read the definitions from our glossary."
+description: "Don't get it? Don't sweat it. Check out the definitions from our glossary."
 icon: "ti-book"
 draft: false
 type: docs
@@ -19,7 +19,7 @@ weight: 8
 
 **Paytrail Sales Channel** – A channel where multiple merchants can sell their products in one location (like an online marketplace or mall). This allows the customer to buy from several different merchants and make only one payment.
 
-**Paytrail Merchant API** – REST service for merchants where they can create and cancel refunds, opt to receive updates for any status changes of a refund and fetch settlement, payment and refund details.
+**Paytrail Merchant API** – REST service for merchants where they can create and cancel refunds, opt to receive updates for any status changes of a refund and retrieve settlement, payment and refund details.
 
 ### Settlements
 

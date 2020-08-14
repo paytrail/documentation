@@ -81,5 +81,5 @@ Content-Type: application/json
 
 ### Resource Specific Error Messages
 
-- `invalid-order-number` (**Code:** `404`) Invalid order number. Check the order number. You can check the value from Merchant's Panel.
+- `invalid-order-number` (**Code:** `404`) Invalid order number. Check the order number. You can check the value from Merchant Panel.
 

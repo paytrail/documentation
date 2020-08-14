@@ -23,13 +23,13 @@ ISO 3 letter symbol for settlement currency e.g. "EUR"
   - `status` string \
   Possible values: "waiting payment", "paid", "cancelled", "waiting acceptance"
   - `paymentMethodId` number \
-  Payment method id, see available methods from selection and visibility of payment methods, list of available methods is [**here**][payment-methods]
+  Payment method id, see list of available payment methods [**here**][payment-methods]
   - `payerName`	string [32] \
   Payer account owner's name from bank files, only available for bank payments
   - `amounts` \
   Payment amounts object
     - `original` number [50000000] \
-    Amount provided in payment data from web shop
+    Amount provided in payment data from website
     - `charged`	number [50000000] \
     Charged amount
     - `settled`	number [50000000] \

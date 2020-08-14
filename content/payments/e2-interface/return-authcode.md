@@ -1,5 +1,5 @@
 ---
-title: "Calculating the RETURN_AUTHCODE"
+title: "Calculating RETURN_AUTHCODE"
 draft: false
 weight: 5
 ---

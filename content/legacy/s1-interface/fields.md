@@ -17,7 +17,7 @@ Merchant ID is the merchant identification number given by Paytrail. Merchant ID
 #### `ORDER_NUMBER (*)`
 **Type**: `String[64]`
 
-Order number is used to identify one transaction from another in the webshop software.
+Order number is used to identify one transaction from another in the website software.
 
 #### `AMOUNT (*)`
 **Type**: `Float[10]`
@@ -74,7 +74,7 @@ Culture affects on default language and how amounts are shown on payment method 
 #### `PRESELECTED_METHOD`
 **Type:** `Number[2]`
 
-If payment method selection is done in the webshop, payment method is delivered in this field. Check the available payment methods from [**this**][methods] page.
+If payment method selection is done in the website, payment method is delivered in this field. Check the available payment methods from [**this**][methods] page.
 
 #### `MODE`
 **Type:** `Number[1]`
@@ -98,7 +98,7 @@ Currently not in use.
 
 ### Calculating the `AUTHCODE`
 
-This example shows how to use the gateway service without additional payment information. In most cases the additional payment information should be used. This form is placed in the webshop by the payment method selection. The form shows the payment button currently in use and moves customer to payment service payment selection page when clicked. All fields are listed in this example, including optional unnecessary fields for better clarity. They can be removed from form. Please note that in `AUTHCODE` calculation all fields, including optional parameters must always be used!
+This example shows how to use the gateway service without additional payment information. In most cases the additional payment information should be used. This form is placed in the website by the payment method selection. The form shows the payment button currently in use and moves customer to payment service payment selection page when clicked. All fields are listed in this example, including optional unnecessary fields for better clarity. They can be removed from form. Please note that in `AUTHCODE` calculation all fields, including optional parameters must always be used!
 
 ```html
 <form action="https://payment.paytrail.com/" method="post">

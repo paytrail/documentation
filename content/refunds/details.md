@@ -62,4 +62,4 @@ Content-Type: application/json
 
 #### `invalid-refund-token (404)`
 
-Invalid refund token. Check refund token. You can check the value from Merchant's Panel.
+Invalid refund token. Check refund token. You can check the value from Merchant Panel.

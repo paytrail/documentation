@@ -1,5 +1,5 @@
 ---
-title: Calculating the AUTHCODE for E2 Payment
+title: Calculating AUTHCODE for E2 Payment
 draft: false
 weight: 3
 ---
@@ -15,7 +15,7 @@ The `AUTHCODE` for the E2 payment is calculated as follows:
 
 ### Using All the Fields
 
-This example covers sending payment information in the most complete form. This form is placed in the web shop by the payment method selection. The form shows the payment button currently in use and moves customer to payment service payment selection page when clicked. All fields are listed in this example, including optional unnecessary fields for better clarity. They can be removed from the form.
+This example covers sending payment information in the most complete form. This form is placed in the website by the payment method selection. The form shows the payment button currently in use and moves customer to payment service payment selection page when clicked. All fields are listed in this example, including optional unnecessary fields for better clarity. They can be removed from the form.
 
 ```html
 <form action="https://payment.paytrail.com/e2" method="post">

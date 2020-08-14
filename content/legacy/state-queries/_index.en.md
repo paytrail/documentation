@@ -6,7 +6,7 @@ weight: 7
 
 The status of an unique payment can be checked with an HTML form.
 
-Webshop developers can implement a button next to an order to allow checking of the status of the payment for any order directly from Paytrail's service. This way the merchant can be sure whether the payment was successfully completed in case the information has not reached the webshop otherwise. This kind of situation can occur for example when customer closes the browser before returning to the webshop and the payment cannot be confirmed as paid with payment status query services provided by the payment method provider.
+Website developers can implement a button next to an order to check the status of the payment for any order directly from Paytrail’s service. This way the merchant can be sure the payment was successfully completed in case the information has not reached the website. This kind of situation can occur for example when customer closes the browser before returning to the website and the payment cannot be confirmed as paid with payment status query services provided by the payment method provider.
 
 ### Example Form
 
@@ -33,7 +33,7 @@ Merchant ID is sent to the merchant after registration.
 #### `ORDER_NUMBER (*)`
 **Type:** `String[50]`
 
-This is the same order number that was generated in the webshop and sent to the Payment Gateway.
+This is the same order number that was generated in the website and sent to the Payment Gateway.
 
 #### `AUTHCODE (*)`
 **Type:** `String[32]`
