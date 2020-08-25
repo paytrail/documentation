@@ -56,7 +56,7 @@ We recommend using our [**Merchant API**][refunds] for initiating refunds from t
 
 Note that a refund can be initiated with any amount greater than zero and less or equal than the paid amount. Keep in mind the VAT included in the original payment.
 
-Passing the `URL_NOTIFY` field allows you to receive a confirmation when the refund has been completed or cancelled.
+Passing the `notifyUrl` field allows you to receive a confirmation when the refund has been completed or cancelled.
 
 ### Settlements
 
