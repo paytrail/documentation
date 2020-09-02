@@ -32,7 +32,7 @@ Localization defines default language for the payment method selection page and 
 - `price` (decimal number[10], optional) \
   Payment total. Send either exact payment data (`orderDetails`) or the payment total to the service. If you send only the payment total price, (_Collector_) invoice and instalment payment method is not available and order details cannot be shown in the Merchant's Panel. We recommend using `orderDetails` record whenever it is possible. The value of price must be greater or equal than `0.65`.
 
-  {{% notice note %}} If you need to receive transactions tat are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
+  {{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
 
 - `urlSet` (required)
 
@@ -84,7 +84,7 @@ Either `orderDetails` or payment sum price has to be specified. `orderDetails` r
       - `price` (decimal number[10], required) \
         Price for one product. If the field payment.orderDetails.includeVat = 0, the price excludes VAT. If the value is 1, the price includes VAT. The price can also be negative if you want to add discounts to the service. However, the total amount of the product rows must always be at least 0.65.
 
-        {{% notice note %}} If you need to receive transactions tat are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
+        {{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
       - `vat` (decimal number[10], required) \
         Tax percentage for a product.
       - `discount` (decimal number[10], optional) \
