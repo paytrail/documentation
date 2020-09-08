@@ -36,6 +36,8 @@ Used to identify one transaction.
 #### `AMOUNT (*)`
 Price is given in euros and cents without currency. Decimals are separated with a dot. Must contain **two decimals**. Interface accepts values between **0.65–499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
 
+{{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
+
 #### `PARAMS_IN (*)`
 Comma separated list of fields used in `AUTHCODE` calculation. Only values listed in this field are shown in payment data.
 
@@ -135,6 +137,8 @@ Required fields when product rows are included in the data are `ITEM_TITLE`, `IT
 All items should be consistent. If one item has `ITEM_ID`, every item should have it.
 
 Total sum of the product prices must be between **0.65 – 499 999.99 €**. Some payment methods have limitations for this value which you can check [**here**][requirements].
+
+{{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
 
 #### `ITEM_TITLE[N] (*)`
 Free field for the product name.

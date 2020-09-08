@@ -30,7 +30,9 @@ Payment currency. Value must be EUR for Finnish banks, otherwise the payment wil
 Localization defines default language for the payment method selection page and presentation format for the amounts. Available localizations are `fi_FI` , `sv_SE` and `en_US`. The default localization is `fi_FI`.
 
 - `price` (decimal number[10], optional) \
-  Payment total. Send either exact payment data (`orderDetails`) or the payment total to the service. If you send only the payment total price, (_Klarna_ and _Collector_) invoice and instalment payment methods are not available and order details cannot be shown in the Merchant's Panel. We recommend using `orderDetails` record whenever it is possible. The value of price must be greater or equal than `0.65`.
+  Payment total. Send either exact payment data (`orderDetails`) or the payment total to the service. If you send only the payment total price, (_Collector_) invoice and instalment payment method is not available and order details cannot be shown in the Merchant's Panel. We recommend using `orderDetails` record whenever it is possible. The value of price must be greater or equal than `0.65`.
+
+  {{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
 
 - `urlSet` (required)
 
@@ -74,13 +76,15 @@ Either `orderDetails` or payment sum price has to be specified. `orderDetails` r
   - `products` (required)
     - `product` (recurring element [1,500])
       - `title` (all characters[255], required) \
-        Product name in free format. The product title is shown in the Merchant Panel and on Klarna service invoices on a product row.
+        Product name in free format. The product title is shown in the Merchant Panel.
       - `code` (all characters[16], optional) \
         Optional product number.
       - `amount` (decimal number[10], required) \
         If an order has several same products, you can enter the number of products here instead of having separate rows for each. Usually this field contains the value `1`. If Collector payment method is used, the value should be an integer. If a decimal such as `0.5` is used, Collector payment method is hidden from the payment method selection page.
       - `price` (decimal number[10], required) \
         Price for one product. If the field payment.orderDetails.includeVat = 0, the price excludes VAT. If the value is 1, the price includes VAT. The price can also be negative if you want to add discounts to the service. However, the total amount of the product rows must always be at least 0.65.
+
+        {{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
       - `vat` (decimal number[10], required) \
         Tax percentage for a product.
       - `discount` (decimal number[10], optional) \

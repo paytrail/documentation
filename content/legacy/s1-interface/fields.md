@@ -26,6 +26,8 @@ Price is given in euros and cents. Price is given without currency type and deci
 
 **Example:** `15.50`. Minimum price accepted by the service is **0.65 €**.
 
+{{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
+
 #### `REFERENCE_NUMBER`
 **Type**: `Number[50]`
 
