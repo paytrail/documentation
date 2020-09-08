@@ -26,7 +26,7 @@ Price is given in euros and cents. Price is given without currency type and deci
 
 **Example:** `15.50`. Minimum price accepted by the service is **0.65 €**.
 
-{{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
+{{% notice note %}} If you need to receive transactions that are less than 0.65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
 
 #### `REFERENCE_NUMBER`
 **Type**: `Number[50]`
@@ -131,7 +131,7 @@ The string to be used for `AUTHCODE` calculation is formed by joining the values
 6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ|13466|99.90|123456||Testitilaus|EUR|http://www.esimerkki.fi/success|http://www.esimerkki.fi/cancel||http://www.esimerkki.fi/notify|S1|fi_FI||1||
 ```
 
-MD5 sum is counted from this string and converted to uppercase. 
+MD5 sum is counted from this string and converted to uppercase.
 
 * **UTF-8:** `270729B19016F94BE5263CA5DE95E330`
 

@@ -185,7 +185,7 @@ Number of products. Usually the value is `1` (_required_). If using the Collecto
 
 The price for a single product. If `INCLUDE_VAT = 0`, this is price not including VAT. If `INCLUDE_VAT = 1`, this price includes VAT. Price may be negative value if a discount is given. Payment total must be positive. Total sum of the product prices must be at least 0.65 €.
 
-{{% notice note %}} If you need to receive transactions that are less than 0,65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
+{{% notice note %}} If you need to receive transactions that are less than 0.65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
 
 #### `ITEM_TAX[N] (*)`
 **Type**: `Float[10]`
