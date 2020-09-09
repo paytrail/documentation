@@ -26,6 +26,8 @@ Valid URL including http(s). URLs that do not include any dots (e.g. <http://loc
 #### `AMOUNT`
 Float between `0.65–499999.99` (10)
 
+{{% notice note %}} If you need to receive transactions that are less than 0.65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
+
 #### `PARAMS_IN`
 `0-9, A-Z, [],_`. (4096)
 

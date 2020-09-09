@@ -109,7 +109,7 @@ Payer's telephone number.
 #### `CONTACT_CELLNO`
 **Type:** `String[64]`
 
-Payer cellphone number. The field is optional, but using Klarna requires this or payer telephone number. If neither is defined Klarna will be hidden.
+Optional payer cellphone number.
 
 #### `CONTACT_EMAIL (*)`
 **Type:** `String[255]`
@@ -168,7 +168,7 @@ In addition to these, order rows can be brought to Paytrail service using the fo
 #### `ITEM_TITLE[N]`
 **Type**: `String[255]`
 
-Free field for product name. Product name will be shown in Merchant's Panel and it is used in Klarna service as a name for product. Either the `ITEM_TITLE` or `ITEM_NO` is required.
+Free field for product name. Product name will be shown in Merchant's Panel. Either the `ITEM_TITLE` or `ITEM_NO` is required.
 
 #### `ITEM_NO[N]`
 **Type**: `String[16]`
@@ -184,6 +184,8 @@ Number of products. Usually the value is `1` (_required_). If using the Collecto
 **Type**: `Float[10]`
 
 The price for a single product. If `INCLUDE_VAT = 0`, this is price not including VAT. If `INCLUDE_VAT = 1`, this price includes VAT. Price may be negative value if a discount is given. Payment total must be positive. Total sum of the product prices must be at least 0.65 €.
+
+{{% notice note %}} If you need to receive transactions that are less than 0.65€, please contact our customer service <https://paytrail.com/en/contact>. {{% /notice %}}
 
 #### `ITEM_TAX[N] (*)`
 **Type**: `Float[10]`

@@ -16,8 +16,6 @@ Here are the ID numbers for active payment methods supported by Paytrail.
 * **6** _Handelsbanken_
 * **9** _PayPal_
 * **10** _S-Pankki_
-* **11** _Klarna Invoice_
-* **12** _Klarna Installment_
 * **18** _Jousto_
 * **50** _Aktia_
 * **51** _POP Pankki_
@@ -34,6 +32,8 @@ Here are the ID numbers for active payment methods supported by Paytrail.
 
 The following payment methods have been deprecated by Paytrail and should not be used. Check the Merchant Panel to see what active payment methods can be used.
 
+* **11** _Klarna Invoice_
+* **12** _Klarna Installment_
 * **30** _Visa_
 * **31** _MasterCard_
 * **34** _Diners Club_

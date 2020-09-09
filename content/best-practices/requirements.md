@@ -20,11 +20,6 @@ A number of payment methods have strict requirements when posting a new payment 
 
 * Payment total sum must be between **20–5000 €**.
 
-### Klarna
-
-* Customer details should be sent with the `PAYER_PERSON_*` fields.
-* Klarna is only available as an interface which requires own agreement with Klarna, and it's hidden until the credentials are saved in Merchant’s Panel.
-
 ### Paypal
 
 * Only available as an interface.
