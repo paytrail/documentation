@@ -84,7 +84,18 @@ Content-Type: application/json
 }
 ```
 
+#### Possible payment status transitions
+
+#### `Waiting payment => paid`
+
+#### `Waiting payment => cancelled`
+
+#### `Cancelled => waiting payment`
+if the customer returns to the payment in one way or the other.
+
+#### `Cancelled => paid`
+'if the payer has first cancelled the payment for some reason, and our system later finds a charge from Bank statements or APIs. In this case a call will be made to the `URL_NOTIFY` address.
+
 ### Resource Specific Error Messages
 
 - `invalid-consumer-payment-id` (**Code:** `404`) Invalid consumer payment ID. Check the consumer payment ID. You can check the value from Merchant Panel.
-
