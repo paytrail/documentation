@@ -86,15 +86,15 @@ Content-Type: application/json
 
 #### Possible payment status transitions
 
-#### `Waiting payment => paid`
+#### `Waiting Payment => Paid`
 
-#### `Waiting payment => cancelled`
+#### `Waiting Payment => Cancelled`
 
-#### `Cancelled => waiting payment`
-if the customer returns to the payment in one way or the other.
+#### `Cancelled => Waiting Payment`
+If the customer returns to the payment in one way or the other.
 
-#### `Cancelled => paid`
-'if the payer has first cancelled the payment for some reason, and our system later finds a charge from Bank statements or APIs. In this case a call will be made to the `URL_NOTIFY` address.
+#### `Cancelled => Paid`
+If the payer has first cancelled the payment for some reason, and our system later finds a charge from Bank statements or APIs. In this case a call will be made to the `URL_NOTIFY` address.
 
 ### Resource Specific Error Messages
 
