@@ -79,7 +79,12 @@ Content-Type: application/json
 ]
 ```
 
+#### Possible payment status transitions
+
+All possible status changes are listed [here][status-changes].
+
 ### Resource Specific Error Messages
 
 - `invalid-order-number` (**Code:** `404`) Invalid order number. Check the order number. You can check the value from Merchant Panel.
 
+[status-changes]: {{< ref "payments/status-changes" >}}
