@@ -14,12 +14,12 @@ GET /merchant/v1/settlements?fromDate=from&toDate=to HTTP/1.1
 
 ### Parameters
 
-#### `from`
+#### `fromDate`
 **Type:** `Date[YYYY-MM-DD]`
 
 Required. Invalid date format or invalid time span will return an empty response (HTTP 404 and `invalid-date-format error`).
 
-#### `to`
+#### `toDate`
 **Type:** `Date[YYYY-MM-DD]`
 
 Required. Invalid date format or invalid time span will return an empty response (HTTP 404 and `invalid-date-format` error).
