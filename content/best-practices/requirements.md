@@ -18,7 +18,7 @@ A number of payment methods have strict requirements when posting a new payment 
 
 ### Jousto
 
-* Payment total sum must be between **20–5000 €**.
+* Payment total sum must be between **20–3000 €**.
 
 ### Paypal
 
