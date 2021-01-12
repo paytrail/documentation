@@ -88,8 +88,6 @@ Content-Type: application/json
 
 All possible status changes are listed [here][status-changes].
 
-{{< figure src="/images/payment-status-transitions.svg" caption="**Payment status transitions.**" >}}
-
 ### Resource Specific Error Messages
 
 - `invalid-consumer-payment-id` (**Code:** `404`) Invalid consumer payment ID. Check the consumer payment ID. You can check the value from Merchant Panel.
