@@ -18,7 +18,7 @@ GET /merchant/v1/settlements/:id HTTP/1.1
 GET /merchant/v1/settlements/123451234512345 HTTP/1.1
 Timestamp: 2012-12-31T12:00:00+0200
 Content-MD5: <base64 encoded 24 characters>
-Authorization: PaytrailMerchantAPI <merchant id>: <base64 encoded 44 characters>
+Authorization: PaytrailMerchantAPI <merchant id>:<base64 encoded 44 characters>
 ```
 
 #### Response
