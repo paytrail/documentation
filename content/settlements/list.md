@@ -53,7 +53,7 @@ ISO 3-letter symbol in uppercase for settlement currency (e.g. `EUR`).
 GET /merchant/v1/settlements?fromDate=2015-01-01&toDate=2015-02-01 HTTP/1.1
 Timestamp: 2012-12-31T12:00:00+0200
 Content-MD5: <base64 encoded 24 characters>
-Authorization: PaytrailMerchantAPI <merchant id>: <base64 encoded 44 characters>
+Authorization: PaytrailMerchantAPI <merchant id>:<base64 encoded 44 characters>
 ```
 
 #### Response
