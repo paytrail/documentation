@@ -55,7 +55,7 @@ In case of `GET` and `POST` requests there is no content in message and `$conten
 {"rows":[{"amount":1000,"description":"Test Product","vatPercent":2400}],"email":"customer@email.com","notifyUrl":"https:\/\/url.to.shop\/apiNotification\/"}
 ```
 
-Calculated signature in this case is `YqpU4WCsnBn7XLOqNd29bu/qfybVP4kIsbeOKOrSifU=`
+Calculated signature in this case is `tc51Vrg3HuLvwE1v0vul95Ux2hIE+COC3kT4EohrqTI=`
 
 More detailed PHP example can be found from our [**examples**][examples-gh].
 
