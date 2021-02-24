@@ -71,7 +71,7 @@ Unicode alphabets and `()[]{}*+-_,.\"'`. See regular expression from `MSG_SETTLE
 Unicode alphabets and `()[]{}*+-_,.\"'`. See regular expression from `MSG_SETTLEMENT_PAYER`. (255)
 
 #### `PAYER_PERSON_FIRSTNAME`
-Unicode alphabets and `()[]{}*+-_,:&!?@#$£=*;~/\"'`. As regular expression `/^[pL-0-9- \"',()[]{}*/+-_,.:&!?@#$£=*;~]*$/u`. (64)
+Unicode alphabets and `()[]{}*+-_,:&!?@#$£=*;~/\"'`.` As regular expression` `/^[pL-0-9- \"',()[]{}*/+-_,.:&!?@#$£=*;~]*$/u`. (64)
 
 #### `PAYER_PERSON_LASTNAME`
 Unicode alphabets and `()[]{}*+-_,:&!?@#$£=*;~/\"'`. See regular expression from `PAYER_PERSON_FIRSTNAME`. (64)
@@ -80,8 +80,8 @@ Unicode alphabets and `()[]{}*+-_,:&!?@#$£=*;~/\"'`. See regular expression fro
 `example@domain.org`, max length for `example` is 64. (255)
 
 #### `PAYER_PERSON_PHONE`
-`0-9`, `+-`. (64)
-
+`0-9`, `+-`. As regular expression `/^[0-9+\-]*$/u` (64)
+``
 #### `PAYER_PERSON_ADDR_STREET`
 Unicode alphabets. As regular expression `/^[\pL-0-9- \"\',. ]*$/u`. (128)
 
