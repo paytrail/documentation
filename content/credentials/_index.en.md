@@ -18,7 +18,7 @@ The test credentials for the Finnish banks and credit cards are listed below. Th
 
 {{< notice warning >}}Payment methods **MobilePay**, **Jousto**, and **Collector** are not available for the test merchant, and can't be tested.{{< /notice >}}
 
-{{< notice info >}}Paytrail sets a minimum limit of **0,65 €** for test payment amount. Payments with amount below will give `System error - unknown error` message on payment page.{{< /notice >}}
+{{< notice note >}}Paytrail sets a minimum limit of **0,65 €** for test payment amount. Payments with amount below will give `System error - unknown error` message on payment page.{{< /notice >}}
 
 
 ### Nordea
