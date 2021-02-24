@@ -81,7 +81,7 @@ Unicode alphabets and `()[]{}*+-_,:&!?@#$£=*;~/\"'`. See regular expression fro
 
 #### `PAYER_PERSON_PHONE`
 `0-9`, `+-`. As regular expression `/^[0-9+\-]*$/u` (64)
-``
+
 #### `PAYER_PERSON_ADDR_STREET`
 Unicode alphabets. As regular expression `/^[\pL-0-9- \"\',. ]*$/u`. (128)
 
