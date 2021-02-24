@@ -21,23 +21,7 @@ Composer package `paytrail/e2-module` helps you to embed Paytrail E2 form on you
 composer require paytrail/e2-module
 ```
 
-The package requires **PHP 7.2** or newer. The detailed documentation is available on [**GitHub**][e2-gh] and [**Packagist**][e2-packagist].
-
-### JavaScript
-
-React package `@paytrail/react-paytrail-e2` outputs a component wrapping the `<form>` element used for E2 interface payments. The detailed documentation is available on [**GitHub**][e2-react] and [**NPM**][e2-npm].
-
-You can import the package to your project with NPM or Yarn like so:
-
-```sh
-# Yarn
-yarn add @paytrail/react-paytrail-e2
-
-# NPM
-npm install --save @paytrail/react-paytrail-e2
-```
+The package requires **PHP 7.3** or newer. The detailed documentation is available on [**GitHub**][e2-gh] and [**Packagist**][e2-packagist].
 
 [e2-gh]: https://github.com/paytrail/e2-module
 [e2-packagist]: https://packagist.org/packages/paytrail/e2-module
-[e2-react]: https://github.com/paytrail/react-paytrail-e2
-[e2-npm]: https://www.npmjs.com/package/@paytrail/react-paytrail-e2
