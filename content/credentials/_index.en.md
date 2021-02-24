@@ -19,13 +19,12 @@ The test credentials for the Finnish banks and credit cards are listed below. Th
 {{< notice warning >}}Payment methods **MobilePay**, **Jousto**, and **Collector** are not available for the test merchant, and can't be tested.{{< /notice >}}
 
 ### Nordea
-- **ID:** `123456`
-- **Password:** `1234`
+Require no credentials, you can return accepted or failed payment.
 
 ### Osuuspankki
 - **User ID:** `123456`
 - **Password:** `7890`
-- **Keynumber:** Any number.
+- **Security code:** Any number
 
 ### Danske Bank
 Use your own user ID for testing. Payments will not be charged on your bank account.
@@ -33,6 +32,9 @@ Use your own user ID for testing. Payments will not be charged on your bank acco
 ### Ålandsbanken
 - **User ID:** `12345678`
 - **ID code:** `1234`
+- **Security code:** Any four digits
+  
+{{% notice note %}}Ålandsbanken test environment accepts only http User-Agent `Mozilla/5.0(Unknown;Linuxx86_64)AppleWebKit/534.34(KHTML,likeGecko) AABDemoTest/1.00 Safari/534.34` in order payment to success.{{% /notice %}}
 
 ### Handelsbanken
 - **User ID:** System fills it for you.
@@ -60,18 +62,18 @@ Use your own user ID for testing. Payments will not be charged on your bank acco
 
 ### Visa
 - **Card Number:** `4925000000000004`
-- **Expiry:** later than current date
-- **CVC:** any 3 digits
+- **Expiry:** Later than current date
+- **CVC:** Any 3 digits
 
 ### MasterCard
 - **Card Number:** `5413000000000000`
-- **Expiry:** later than current date
-- **CVC:** any 3 digits
+- **Expiry:** Later than current date
+- **CVC:** Any 3 digits
 
 ### American Express
 - **Card Number:** `375700000000002`
-- **Expiry:** later than current date
-- **CVC:** any 3 digits
+- **Expiry:** Later than current date
+- **CVC:** Any 3 digits
 
 Card transaction errors can be simulated by setting the payment amount in following way.
 
