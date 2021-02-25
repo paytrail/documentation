@@ -11,7 +11,7 @@ FROM development AS build
 
 RUN make build
 
-FROM nginx:1.17-alpine AS production
+FROM nginx:latest AS production
 
 COPY conf/nginx.conf /etc/nginx
 COPY conf/default.conf /etc/nginx/conf.d
