@@ -16,6 +16,8 @@ JavaScript interface offers two methods; one is used for the chosen payment inte
 
 {{% notice note %}}Embedding the Payment method selection page widget uses jQuery in order to enable cross-browser compatibility. The module downloads jQuery library version 1.7 automatically from Google cloud services if jQuery is not available or jQuery version is unsupported. Required jQuery version is 1.4.3 or later.{{% /notice %}}
 
+{{% notice note %}}Widget is not optimized for mobile devices.{{% /notice %}}
+
 ### Download
 
 The widget version **1.0** can be downloaded [**here**][widget] (_18 KB, minified_).

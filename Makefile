@@ -5,6 +5,7 @@ TARGETS:= public/
 all: $(TARGETS)
 
 clean:
+    chown -R $(id -u):$(id -g) $(TARGETS)
 	rm -rf $(TARGETS)
 
 build: clean
