@@ -9,7 +9,7 @@ clean:
 	rm -rf $(TARGETS)
 
 build: clean
-	sudo hugo --gc --minify
+	hugo --gc --minify
 
 start:
 	hugo serve -D --bind 0.0.0.0
