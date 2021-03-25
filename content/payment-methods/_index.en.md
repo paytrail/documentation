@@ -14,7 +14,7 @@ It is possible to bypass the Paytrail payment method selection page and implemen
 Bypassing the payment method page allows you to implement the payment method selection to match the look and feel of the website. Good alternatives for implementing the payment method selection are a dropdown menu or separate images for each payment method.
 Payment page bypass is a premium feature (contact our customer service team for more information) that enables the selection of the payment method already on the website. When using bypass, the customer is directed to the selected payment service without visibly passing through Paytrail’s service.
 
-[Download payment method logos and banner ↓ (_129 KB, ZIP_)](https://cdn2.hubspot.net/hubfs/335946/Files/Verkkomaksupainikkeet-logot-ja-bannerit.zip)
+[Download payment method logos and banner ↓ (_129 KB, ZIP_)](https://www.paytrail.com/hubfs/Logot-Kayttoonotto/Logot-ja-banneri.zip)
 
 [e2]: {{< ref "payments/e2-interface/fields" >}}
 
