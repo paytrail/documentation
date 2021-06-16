@@ -16,7 +16,7 @@ weight: 6
 
 The test credentials for the Finnish banks and credit cards are listed below. They can be used with the test credentials to test the complete payment process without making any real payments.
 
-{{< notice warning >}}Payment methods **MobilePay**, **Jousto**a nd **Collector** are not available for the test merchant, and can't be tested.{{< /notice >}}
+{{< notice warning >}}Payment methods **MobilePay**, **Jousto** and **Collector** are not available for the test merchant, and can't be tested.{{< /notice >}}
 
 {{< notice note >}}**Osuuspankki** does not currently have working test credentials and cannot be tested.{{< /notice >}}
 
