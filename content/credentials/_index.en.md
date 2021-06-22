@@ -16,17 +16,14 @@ weight: 6
 
 The test credentials for the Finnish banks and credit cards are listed below. They can be used with the test credentials to test the complete payment process without making any real payments.
 
-{{< notice warning >}}Payment methods **MobilePay**, **Jousto**, and **Collector** are not available for the test merchant, and can't be tested.{{< /notice >}}
+{{< notice warning >}}Payment methods **MobilePay**, **Jousto** and **Collector** are not available for the test merchant, and can't be tested.{{< /notice >}}
+
+{{< notice note >}}**Osuuspankki** does not currently have working test credentials and cannot be tested.{{< /notice >}}
 
 {{< notice note >}}Paytrail sets a minimum amount of **0,65 €** for test payment. Payments with amount below will give `System error - unknown error` message on payment page.{{< /notice >}}
 
 ### Nordea
 Require no credentials, you can return accepted or failed payment.
-
-### Osuuspankki
-- **User ID:** `123456`
-- **Password:** `7890`
-- **Security code:** Any number
 
 ### Danske Bank
 Use your own user ID for testing. Payments will not be charged on your bank account.
